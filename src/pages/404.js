@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import "../styles/404.scss"
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
 import lookingUp from "../images/undraw_counting_stars_rrnl.svg"
 
 const NotFoundPage = () => {

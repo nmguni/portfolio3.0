@@ -1,20 +1,6 @@
 import React from "react"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
 
 const About = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      profileImage: file(relativePath: { eq: "undraw_profile.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <div id="about" className="about">
       <div className="container">
@@ -40,10 +26,19 @@ const About = () => {
         </div>
         <h3 className="skill">Current Stack</h3>
         <p className="stack">
-          Technologies I use regularly are HTML, SCSS, JavaScript, and React.
+          Technologies I use regularly are <strong>HTML</strong>,{" "}
+          <strong>SCSS</strong>, <strong>JavaScript</strong>, and{" "}
+          <strong>React</strong>.
         </p>
-        <p className="stack">I am familiar with Express, SEO, Wordpress, </p>
-        <p className="stack">I am currently learning Node, MongoDB </p>
+        <p className="stack">
+          I am familiar with <strong>Express</strong>, <strong>SEO</strong>,{" "}
+          <strong>Wordpress</strong>, <strong>Bootstrap</strong>,{" "}
+          <strong>Material ui</strong>, <strong>Git</strong>
+        </p>
+        <p className="stack">
+          I have an intest in learning <strong>MongoDB</strong>,{" "}
+          <strong>Node</strong> and <strong>UX design</strong>,{" "}
+        </p>
 
         <button className="btn">
           <a href="#">resume</a>

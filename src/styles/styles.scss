@@ -371,7 +371,7 @@ header {
 
     h2 {
       text-transform: capitalize;
-      font-size: 3.5vw;
+      font-size: 3rem;
       font-weight: 400;
       font-style: normal;
       margin: 0;
@@ -380,7 +380,7 @@ header {
     }
     h3 {
       text-transform: capitalize;
-      font-size: 3vw;
+      font-size: 1.8rem;
       font-weight: 400;
       font-style: normal;
       margin: 0;
@@ -395,7 +395,7 @@ header {
       p {
         font-size: 1rem;
         font-weight: 300;
-        line-height: 2rem;
+        line-height: 1.5rem;
         letter-spacing: -0.66px;
       }
     }
@@ -421,16 +421,13 @@ header {
       font-size: 1rem;
     }
   }
-  // blakc box
   .black-box {
     background-color: $maroon;
     height: 100%;
     width: 50px;
     position: absolute;
     right: 20%;
-    // top: 55%;
     bottom: 0;
-    // transform: translateY(-70%);
     opacity: 0.1;
   }
 }
@@ -448,7 +445,7 @@ header {
   align-items: center;
   // align-items: center;/
   .title {
-    font-size: 4vw;
+    font-size: 2rem;
     text-transform: capitalize;
     font-weight: 400;
     font-style: normal;
@@ -559,8 +556,6 @@ header {
       }
     }
   }
-  .contact {
-  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -603,6 +598,13 @@ header {
       }
     }
   }
+  .about {
+    .container {
+      .stack {
+        line-height: 1.5rem;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -627,5 +629,8 @@ header {
         }
       }
     }
+  }
+  .about {
+    padding-bottom: 2.5rem;
   }
 }

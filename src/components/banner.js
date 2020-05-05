@@ -1,5 +1,4 @@
 import React from "react"
-import SEO from "../components/seo"
 import Accordion from "./Accordion"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"

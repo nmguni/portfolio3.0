@@ -6,51 +6,33 @@ import Button from "@material-ui/core/Button"
 import TextField from "@material-ui/core/TextField"
 import Paper from "@material-ui/core/Paper"
 import { makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
 //cons
 import TwitterIcon from "@material-ui/icons/Twitter"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import GitHubIcon from "@material-ui/icons/GitHub"
+import PhoneIcon from "@material-ui/icons/Phone"
+import EmailIcon from "@material-ui/icons/Email"
 
 const useStyles = makeStyles(theme => ({
   paper: {
     padding: "2rem",
     opacity: ".75",
-    width: "100%",
+    width: "425px",
     [theme.breakpoints.down(800)]: {
       width: "80%",
       margin: "0",
     },
   },
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gridGap: "4rem",
-    [theme.breakpoints.down(1000)]: {
-      display: "grid",
-      gridTemplateColumns: "1fr",
-      gridGap: "1rem",
-    },
-  },
-
-  list: {
-    listStyle: "none",
-    lineHeight: "3rem",
-    fontSize: "1.4rem",
-    color: "#3a3e41;",
-    fontWeight: "bold",
-    margin: "0",
-  },
 
   links: {
     margin: "0",
-    padding: " .5rem",
+    padding: " .8rem",
     textDecoration: "none",
     color: "#364f6b",
   },
   icon: {
     fontSize: "3rem",
-    paddingTop: "1rem",
+    paddingTop: "1.3rem",
     "&:hover ": {
       color: "#3a3e41",
     },
@@ -64,7 +46,7 @@ const Contact = () => {
         <h2>Get in touch</h2>
       </div>
       {/* ------------ */}
-      <div className={classes.grid}>
+      <div className="contact-form">
         <form>
           <Paper className={classes.paper}>
             <FormControl required fullWidth margin="normal">
@@ -96,59 +78,48 @@ const Contact = () => {
             </Button>
           </Paper>
         </form>
-        <div>
-          <ul className={classes.list}>
-            <li>
-              Phone:
-              <a
-                className={classes.links}
-                href="tel: 519 660 0813"
-                rel="noreferrer noopener"
-                target="blank"
-              >
-                519-660-0813
-              </a>
-            </li>
-            <li>
-              Email:
-              <a
-                className={classes.links}
-                href="mailto: ndumiso29@gmail.com "
-                rel="noreferrer noopener"
-                target="blank"
-              >
-                ndumiso29@gmail.com
-              </a>
-            </li>
-
-            <a
-              className={classes.links}
-              href="https://twitter.com/Ndumiso_29"
-              rel="noreferrer noopener"
-              target="blank"
-            >
-              <TwitterIcon className={classes.icon} />
-            </a>
-
-            <a
-              className={classes.links}
-              href="https://www.linkedin.com/in/ndumiso-mguni-121b7b164/"
-              rel="noreferrer noopener"
-              target="blank"
-            >
-              <LinkedInIcon className={classes.icon} />
-            </a>
-
-            <a
-              className={classes.links}
-              href="https://github.com/nmguni"
-              rel="noreferrer noopener"
-              target="blank"
-            >
-              <GitHubIcon className={classes.icon} />
-            </a>
-          </ul>
-        </div>
+      </div>
+      <div className="contact-links">
+        <a
+          className={classes.links}
+          href="tel: 519 701 0530"
+          rel="noreferrer noopener"
+          target="blank"
+        >
+          <PhoneIcon className={classes.icon} />
+        </a>
+        <a
+          className={classes.links}
+          href="mailto: ndumiso29@gmail.com "
+          rel="noreferrer noopener"
+          target="blank"
+        >
+          <EmailIcon className={classes.icon} />
+        </a>
+        <a
+          className={classes.links}
+          href="https://twitter.com/Ndumiso_29"
+          rel="noreferrer noopener"
+          target="blank"
+        >
+          <TwitterIcon className={classes.icon} />
+        </a>
+        <a
+          className={classes.links}
+          href="https://www.linkedin.com/in/ndumiso-mguni-121b7b164/"
+          rel="noreferrer noopener"
+          target="blank"
+        >
+          <LinkedInIcon className={classes.icon} />
+        </a>
+        <a
+          className={classes.links}
+          href="https://github.com/nmguni"
+          rel="noreferrer noopener"
+          target="blank"
+        >
+          <GitHubIcon className={classes.icon} />
+        </a>
       </div>
 
       {/* ------------ */}
