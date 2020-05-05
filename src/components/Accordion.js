@@ -5,7 +5,6 @@ import "./Accordion.scss"
 function Accordion(props) {
   const [setActive, setActiveState] = useState("")
   const [setHeight, setHeightState] = useState("0px")
-  // const [setRotateState] = useState("accordion__icon")
 
   const content = useRef(null)
 

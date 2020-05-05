@@ -69,7 +69,6 @@ const Contact = () => {
                 multiline
                 rows={4}
                 name="message"
-                id="message"
                 variant="outlined"
               />
             </FormControl>

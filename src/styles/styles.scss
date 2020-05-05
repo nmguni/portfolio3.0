@@ -519,6 +519,11 @@ header {
 }
 
 @media only screen and (max-width: 1000px) {
+  .banner {
+    .scroll {
+      display: none;
+    }
+  }
   .Portfolio {
     margin: 0 5%;
     .port-container {

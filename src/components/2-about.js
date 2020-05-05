@@ -24,7 +24,7 @@ const About = () => {
             friends.
           </p>
         </div>
-        <h3 className="skill">Current Stack</h3>
+        <h3 className="skill">Stack</h3>
         <p className="stack">
           Technologies I use regularly are <strong>HTML</strong>,{" "}
           <strong>SCSS</strong>, <strong>JavaScript</strong>, and{" "}
@@ -39,10 +39,6 @@ const About = () => {
           I have an intest in learning <strong>MongoDB</strong>,{" "}
           <strong>Node</strong> and <strong>UX design</strong>,{" "}
         </p>
-
-        <button className="btn">
-          <a href="#">resume</a>
-        </button>
       </div>
 
       <div className="black-box"></div>

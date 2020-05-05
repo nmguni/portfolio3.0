@@ -147,12 +147,12 @@ const Header = () => {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <a className={classes.links} href="/#about">
+        <a className={classes.links} href="/#portfolio">
           My Work
         </a>
       </MenuItem>
       <MenuItem>
-        <a className={classes.links} href="/#blog">
+        <a className={classes.links} href="/#about">
           About
         </a>
       </MenuItem>
