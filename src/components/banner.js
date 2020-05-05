@@ -1,11 +1,26 @@
 import React from "react"
 import SEO from "../components/seo"
 import Accordion from "./Accordion"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Banner = () => {
+const Banner = ({ author }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          author
+        }
+      }
+    }
+  `)
+
   return (
     <div className="banner">
-      <SEO title="Mguni" />
+      <Helmet
+        title={`${data.site.siteMetadata.author} | ${data.site.siteMetadata.title}`}
+      />
       <div className="container">
         <div className="row">
           <div className="greating">Hello!</div>

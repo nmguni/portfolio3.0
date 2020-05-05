@@ -3,22 +3,9 @@ import { Link } from "gatsby"
 import "../styles/404.scss"
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import lookingUp from "../images/undraw_counting_stars_rrnl.svg"
 
 const NotFoundPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      lookingUp: file(relativePath: { eq: "undraw_counting_stars_rrnl.svg" }) {
-        childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <div className="root">
       <SEO title="404: Not found" />

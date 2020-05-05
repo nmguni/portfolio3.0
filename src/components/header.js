@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 import { fade, makeStyles } from "@material-ui/core/styles"
 import MenuItem from "@material-ui/core/MenuItem"
@@ -7,7 +6,6 @@ import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import IconButton from "@material-ui/core/IconButton"
 import Typography from "@material-ui/core/Typography"
-import Badge from "@material-ui/core/Badge"
 import MoreIcon from "@material-ui/icons/MoreVert"
 import logo from "../images/favicon.png"
 const useStyles = makeStyles(theme => ({
@@ -182,7 +180,7 @@ const Header = () => {
             <Typography className={classes.title} variant="h6" noWrap>
               <a className={classes.titleLink} href="/">
                 {" "}
-                <img className={classes.logo} src={logo}></img>
+                <img alt="logo" className={classes.logo} src={logo}></img>
               </a>
             </Typography>
             <div className={classes.grow} />
