@@ -307,7 +307,7 @@ const Portfolio = () => {
         </div>
 
         <div className="double-image">
-          <div className="project-name"> malcolm & Martin</div>
+          <div className="project-name"> Malcolm & Martin</div>
           <div className="section">
             <div className="image-row">
               <div>

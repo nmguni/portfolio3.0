@@ -29,6 +29,9 @@ const useStyles = makeStyles(theme => ({
     padding: " .8rem",
     textDecoration: "none",
     color: "#364f6b",
+    [theme.breakpoints.down(450)]: {
+      padding: " .2rem",
+    },
   },
   icon: {
     fontSize: "3rem",
