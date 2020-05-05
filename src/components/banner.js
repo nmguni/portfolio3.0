@@ -1,5 +1,5 @@
 import React from "react"
-import Accordion from "./Accordion"
+import Accordion from "../styles/accordion.scss"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 

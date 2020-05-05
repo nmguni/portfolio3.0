@@ -1,9 +1,6 @@
 import React from "react"
 import "../styles/styles.scss"
 
-// import Layout from "../components/layout"
-// import SEO from "../components/seo"
-
 // Import Components
 import Header from "../components/header"
 import Banner from "../components/Banner"

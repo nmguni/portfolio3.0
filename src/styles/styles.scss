@@ -37,33 +37,6 @@ $dotted-background: linear-gradient(
   $dot-color;
 $dotted-background-size: $dot-space $dot-space;
 
-//----------------------------------------------------------------------------
-//----------------------------------------------------------------------------
-//----------------------------------------------------------------------------
-// // Colors
-// $bg-color: white;
-// $dot-color: black;
-
-// // Dimensions
-// $dot-size: 1px;
-// $dot-space: 22px;
-
-// .headColor {
-//   padding: 2rem;
-//   padding-bottom: 3rem;
-//   background: linear-gradient(
-//         90deg,
-//         $bg-color ($dot-space - $dot-size),
-//         transparent 1%
-//       )
-//       center,
-//     linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
-//     $dot-color;
-//   background-size: $dot-space $dot-space;
-// }
-//----------------------------------------------------------------------------
-//----------------------------------------------------------------------------
-//----------------------------------------------------------------------------
 html,
 body {
   font-family: "libre caslon text";
@@ -75,22 +48,6 @@ body {
 
 .container {
   margin: 0 10%;
-
-  // width: 1640px;
-  // min-width: 1640px;
-  // margin: 0 auto;
-  // @media (max-width: 1440px) {
-  //   width: 1280px;
-  //   min-width: 1280px;
-  // }
-  // @media (max-width: 1280px) {
-  //   width: 976px;
-  //   min-width: 976px;
-  // }
-  // @media (max-width: 976px) {
-  //   width: 768px;
-  //   min-width: 768px;
-  // }
 }
 
 // Header
@@ -128,10 +85,6 @@ header {
           text-transform: uppercase;
           font-size: 1rem;
           color: #383a3c;
-
-          // &:last-child {
-          //   margin-right: 0cm;
-          // }
         }
       }
       .dark-mode {
@@ -149,38 +102,15 @@ header {
   position: relative;
   height: 100vh;
   letter-spacing: 0.1rem;
-  background: linear-gradient(
-        90deg,
-        $bg-color ($dot-space - $dot-size),
-        transparent 1%
-      )
-      center,
-    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
-    $dot-color;
-  background-size: $dot-space $dot-space;
+  background: $dotted-background;
+  background-size: $dotted-background-size;
 
   .row {
     position: relative;
-    // background: linear-gradient(
-    //       90deg,
-    //       $bg-color ($dot-space - $dot-size),
-    //       transparent 1%
-    //     )
-    //     center,
-    //   linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
-    //   $dot-color;
-    // background-size: $dot-space $dot-space;
-    // padding: 3rem;
 
     .greating {
       line-height: 1.3em;
       font-weight: 400;
-
-      // font-size: 2.45rem;
-      // color: #2727278f;
-      // background: #f3f169;
-      // padding: 0.2rem 0.5rem;
-
       display: inline-block;
       margin-bottom: 0.5rem;
 
@@ -246,16 +176,8 @@ header {
   }
   .port-container {
     .section {
-      background: linear-gradient(
-            90deg,
-            $bg-color ($dot-space - $dot-size),
-            transparent 1%
-          )
-          center,
-        linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%)
-          center,
-        $dot-color;
-      background-size: $dot-space $dot-space;
+      background: $dotted-background;
+      background-size: $dotted-background-size;
 
       padding: 3rem 0;
     }

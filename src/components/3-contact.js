@@ -50,7 +50,7 @@ const Contact = () => {
       </div>
       {/* ------------ */}
       <div className="contact-form">
-        <form>
+        <form data-netlify="true">
           <Paper className={classes.paper}>
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="Enter-your-name" name="name" color="primary">

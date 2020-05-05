@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react"
 
-import "./Accordion.scss"
+import "../styles/accordion.scss"
 
 function Accordion(props) {
   const [setActive, setActiveState] = useState("")
