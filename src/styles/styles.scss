@@ -284,11 +284,15 @@ header {
   margin-top: 5%;
   background: $off-white;
   position: relative;
+  strong {
+    color: #3a3e41;
+  }
 
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     height: 100vh;
 
     h2 {
@@ -308,6 +312,7 @@ header {
       margin: 0;
       color: $off-black;
       padding: 0.5rem;
+      width: 100%;
     }
     .skill {
       background-color: rgba(0, 0, 0, 0.075);
@@ -315,9 +320,9 @@ header {
 
     .about-content {
       p {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 300;
-        line-height: 1.5rem;
+        line-height: 2rem;
         letter-spacing: -0.66px;
       }
     }
@@ -559,6 +564,6 @@ header {
     }
   }
   .about {
-    padding-bottom: 2.5rem;
+    padding: 25% 0 20%;
   }
 }

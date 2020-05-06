@@ -1,4 +1,5 @@
 import React from "react"
+import downloadFile from "../resume/Ndumiso_Mguni_Resume.pdf"
 
 const About = () => {
   return (
@@ -26,19 +27,25 @@ const About = () => {
         </div>
         <h3 className="skill">Stack</h3>
         <p className="stack">
-          Technologies I use regularly are <strong>HTML</strong>,{" "}
-          <strong>SCSS</strong>, <strong>JavaScript</strong>, and{" "}
-          <strong>React</strong>.
+          Regularly use: <strong> HTML</strong>, <strong> SCSS</strong>,{" "}
+          <strong> JavaScript</strong>, and <strong> React</strong>.
         </p>
         <p className="stack">
-          I am familiar with <strong>Express</strong>, <strong>SEO</strong>,{" "}
-          <strong>Wordpress</strong>, <strong>Bootstrap</strong>,{" "}
-          <strong>Material ui</strong>, <strong>Git</strong>
+          Familiar with: <strong> Express</strong>, <strong> SEO</strong>,{" "}
+          <strong> Wordpress</strong>, <strong> Bootstrap</strong>,{" "}
+          <strong> Material ui</strong>, <strong> Git</strong>
         </p>
         <p className="stack">
-          I have an intest in learning <strong>MongoDB</strong>,{" "}
-          <strong>Node</strong> and <strong>UX design</strong>,{" "}
+          Intrest in learning / currently learning: <strong> MongoDB</strong>,{" "}
+          <strong> Node</strong>,<strong> GRAPHQL</strong> and
+          <strong> UX design principles</strong>,{" "}
         </p>
+
+        <button className="btn">
+          <a rel="noopener noreferrer" href={downloadFile} target="_blank">
+            resume{" "}
+          </a>
+        </button>
       </div>
 
       <div className="black-box"></div>
