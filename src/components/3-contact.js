@@ -50,7 +50,7 @@ const Contact = () => {
       </div>
       {/* ------------ */}
       <div className="contact-form">
-        <form data-netlify="true">
+        <form onSubmit={e => this.submitLogin(e)} data-netlify="true">
           <Paper className={classes.paper}>
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="Enter-your-name" name="name" color="primary">
@@ -127,6 +127,10 @@ const Contact = () => {
       {/* ------------ */}
     </div>
   )
+}
+
+submitLogin = async e => {
+  e.preventDefault() // This is to prevent the automatic refreshing of the page on submit.
 }
 
 export default Contact
