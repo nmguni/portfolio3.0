@@ -1,10 +1,4 @@
 import React from "react"
-import FormControl from "@material-ui/core/FormControl"
-import InputLabel from "@material-ui/core/InputLabel"
-import Input from "@material-ui/core/Input"
-import Button from "@material-ui/core/Button"
-import TextField from "@material-ui/core/TextField"
-import Paper from "@material-ui/core/Paper"
 import { makeStyles } from "@material-ui/core/styles"
 //cons
 import TwitterIcon from "@material-ui/icons/Twitter"
@@ -14,16 +8,6 @@ import PhoneIcon from "@material-ui/icons/Phone"
 import EmailIcon from "@material-ui/icons/Email"
 
 const useStyles = makeStyles(theme => ({
-  paper: {
-    padding: "2rem",
-    opacity: ".75",
-    width: "425px",
-    [theme.breakpoints.down(800)]: {
-      width: "80%",
-      margin: "0",
-    },
-  },
-
   links: {
     margin: "0",
     padding: " .8rem",
@@ -48,39 +32,7 @@ const Contact = () => {
       <div className="title">
         <h2>Get in touch</h2>
       </div>
-      {/* ------------ */}
-      <div className="contact-form">
-        <form onSubmit={e => this.submitLogin(e)} data-netlify="true">
-          <Paper className={classes.paper}>
-            <FormControl required fullWidth margin="normal">
-              <InputLabel htmlFor="Enter-your-name" name="name" color="primary">
-                Enter Your name
-              </InputLabel>
-              <Input type="text" name="name" id="name"></Input>
-            </FormControl>
-            <FormControl required fullWidth margin="normal">
-              <InputLabel name="email" htmlFor="email">
-                Enter Your Email
-              </InputLabel>
-              <Input type="email" name="email" id="email"></Input>
-            </FormControl>
-            <div data-netlify-recaptcha="true"></div>
-            <FormControl required fullWidth margin="normal">
-              <TextField
-                id="outlined-multiline-static"
-                label="Message"
-                multiline
-                rows={4}
-                name="message"
-                variant="outlined"
-              />
-            </FormControl>
-            <Button type="submit" variant="contained">
-              Send
-            </Button>
-          </Paper>
-        </form>
-      </div>
+
       <div className="contact-links">
         <a
           className={classes.links}
@@ -127,10 +79,6 @@ const Contact = () => {
       {/* ------------ */}
     </div>
   )
-}
-
-submitLogin = async e => {
-  e.preventDefault() // This is to prevent the automatic refreshing of the page on submit.
 }
 
 export default Contact
