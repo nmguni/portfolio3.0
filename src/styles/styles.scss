@@ -285,7 +285,7 @@ header {
   background: $off-white;
   position: relative;
   strong {
-    color: #3a3e41;
+    color: #800000b5;
   }
 
   .container {
@@ -324,22 +324,6 @@ header {
         font-weight: 300;
         line-height: 2rem;
         letter-spacing: -0.66px;
-      }
-    }
-    .btn {
-      letter-spacing: 0.46px;
-      padding: 0;
-      font-size: 1rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      border: none;
-      background-color: inherit;
-
-      a {
-        color: #3a3e41;
-        text-decoration: none;
-        background-color: inherit;
-        border-bottom: 2px solid $maroon;
       }
     }
     .stack {
