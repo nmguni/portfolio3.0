@@ -228,7 +228,7 @@ const Portfolio = () => {
         <div className="single-img">
           <div className="right">
             <Img
-              alt="personal blog"
+              alt="Hackernews"
               className="img2"
               fluid={data.hackerNews.childImageSharp.fluid}
             />
@@ -266,7 +266,7 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="single-img">
+        {/* <div className="single-img">
           <div className="right">
             <Img
               alt="personal blog"
@@ -304,7 +304,7 @@ const Portfolio = () => {
             </div>{" "}
             <p className="stack">Gatsby - SCSS</p>
           </div>
-        </div>
+        </div> */}
 
         <div className="double-image">
           <div className="project-name"> Malcolm & Martin</div>
