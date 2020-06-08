@@ -198,7 +198,7 @@ header {
         text-decoration: none;
         font-weight: 600;
         text-transform: uppercase;
-        font-size: 0.75rem;
+        font-size: 0.95rem;
 
         &:hover {
           color: white;
@@ -209,14 +209,14 @@ header {
     }
     .bodyText {
       margin: 1rem 0 0 0;
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: 300;
       line-height: 2rem;
       letter-spacing: -0.66px;
     }
   }
   .stack {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     color: $off-black;
     margin: 0.5rem 0 0 0;
     padding: 0.3rem 0.2rem 0 0.2rem;
@@ -282,7 +282,7 @@ header {
   height: 100vh;
   padding-top: 2.5rem;
   margin-top: 5%;
-  background: $off-white;
+  // background: $off-white;
   position: relative;
   strong {
     color: #800000b5;
@@ -297,8 +297,8 @@ header {
 
     h2 {
       text-transform: capitalize;
-      font-size: 3rem;
-      font-weight: 400;
+      font-size: 3.5rem;
+      font-weight: 600;
       font-style: normal;
       margin: 0;
       color: $off-black;
@@ -319,17 +319,36 @@ header {
     }
 
     .about-content {
+      display: grid;
+      grid-template-columns: 35% auto;
+      grid-gap: 2rem;
       p {
         font-size: 1.2rem;
         font-weight: 300;
-        line-height: 2rem;
-        letter-spacing: -0.66px;
+        line-height: 2.2rem;
+        letter-spacing: -0.98px;
+        color: #323232;
       }
     }
-    .stack {
-      margin: 0;
-      line-height: 2.5rem;
-      font-size: 1rem;
+
+    .about-stack {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .stack-list {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+      }
+
+      .stack-item {
+        background-color: #364f6b;
+        color: white;
+        padding: 0.1rem 0.38rem;
+        border-radius: 3px;
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+      }
     }
   }
   .black-box {
@@ -469,6 +488,46 @@ header {
       }
       .left {
         padding: 0 2% 2.5rem 0.5rem;
+      }
+    }
+  }
+
+  .about {
+    .about-content {
+      .text-section {
+        p {
+          margin: 0.2rem 0;
+        }
+      }
+      .about-stack {
+        grid-template-columns: 100%;
+        .stack-list {
+          .stack-item {
+            margin: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .about {
+    .about-content {
+      grid: unset !important;
+
+      .text-section {
+        p {
+          margin: 0.2rem 0;
+        }
+      }
+      .about-stack {
+        grid-template-columns: 1fr 1fr;
+        .stack-list {
+          .stack-item {
+            margin: 0.5rem;
+          }
+        }
       }
     }
   }

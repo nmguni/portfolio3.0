@@ -47,7 +47,14 @@ const Portfolio = () => {
           }
         }
       }
-      recipe: file(relativePath: { eq: "recipe.jpg" }) {
+      chatApp: file(relativePath: { eq: "chatApp.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      chat: file(relativePath: { eq: "chat.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -128,51 +135,51 @@ const Portfolio = () => {
           React - SCSS (Styled Componeonts) - Material ui - FireBase
         </p>
 
-        <div className="single-img">
-          <div className="right">
-            <Img
-              alt="Recipe searching app"
-              className="img2"
-              fluid={data.recipe.childImageSharp.fluid}
-            />
+        <div className="double-image">
+          <div className="project-name">Real Time Chat App</div>
+          <div className="section">
+            <div className="image-row">
+              <div className="left">
+                <Img
+                  alt="real time chat app login"
+                  className="img"
+                  fluid={data.chatApp.childImageSharp.fluid}
+                />
+              </div>
+
+              <div className="right">
+                <Img
+                  alt="real time chat app "
+                  className="img"
+                  fluid={data.chat.childImageSharp.fluid}
+                />
+              </div>
+            </div>
           </div>
-          <div className="left">
-            <div className="project-name"> Recipe App API</div>
-            <p className="bodyText">
-              Recipe searching app that uses{" "}
-              <a
-                className="body-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.edamam.com/"
-              >
-                {" "}
-                Edamams'
-              </a>{" "}
-              API that has 1.7+ million recipes to search from!
-            </p>
-            <div className="links">
-              {" "}
-              <a
-                className="port-link"
-                href="https://github.com/nmguni/recipe-app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                code
-              </a>{" "}
-              |{" "}
-              <a
-                className="port-link"
-                href="https://myrecipe-search-app.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                preview
-              </a>
-            </div>{" "}
-            <p className="stack">React - SCSS - Material ui - </p>
+          <p className="bodyText">
+            Realtime Chat Application. React on the front end, with NodeJS +
+            Socket.io web socket library on the back end
+          </p>
+          <div className="links">
+            <a
+              className="port-link"
+              href="https://github.com/nmguni/-realtime-chat-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              code
+            </a>{" "}
+            |{" "}
+            <a
+              className="port-link"
+              href="https://rick-morty-chat-app.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              preview
+            </a>
           </div>
+          <p className="stack">React - Express - Axios - Node.js - Socket.io</p>
         </div>
 
         <div className="double-image">
