@@ -19,7 +19,7 @@ const Portfolio = () => {
           }
         }
       }
-      evernote: file(relativePath: { eq: "evernote.png" }) {
+      blog: file(relativePath: { eq: "blog.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -61,7 +61,7 @@ const Portfolio = () => {
           }
         }
       }
-      insideNote: file(relativePath: { eq: "evernote-inside.png" }) {
+      innerBlog: file(relativePath: { eq: "inner-blog.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -90,31 +90,36 @@ const Portfolio = () => {
     <div id="portfolio" className="Portfolio">
       <div className="title">Portfolio</div>
       <div className="port-container">
-        <div className="project-name"> Evernote Clone</div>
+        <div className="project-name">Blog</div>
         <div className="section">
           <div className="image-row">
             <div className="left">
               <Img
-                alt="evernote note taking app login"
+                alt="Blog home page"
                 className="img"
-                fluid={data.evernote.childImageSharp.fluid}
+                fluid={data.blog.childImageSharp.fluid}
               />
             </div>
 
             <div className="right">
               <Img
-                alt="evernote note taking app inside"
+                alt="Blogs Page"
                 className="img"
-                fluid={data.insideNote.childImageSharp.fluid}
+                fluid={data.innerBlog.childImageSharp.fluid}
               />
             </div>
           </div>
         </div>
-        <p className="bodyText">EverNote clone with Login authentication</p>
+        <p className="bodyText">
+          I wanted something fast and with good SEO for my blog, so a static
+          website generator like Gatsby seemed like the best fit! <br /> I built
+          this blog to write about various topics in Front-End Development, and
+          the best way to learn something is by teaching it to others!{" "}
+        </p>
         <div className="links">
           <a
             className="port-link"
-            href="https://github.com/nmguni/evernote"
+            href="https://github.com/nmguni/personal-blog"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -123,7 +128,7 @@ const Portfolio = () => {
           |{" "}
           <a
             className="port-link"
-            href="https://ever-notes.netlify.app/"
+            href="https://devblogmguni.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -131,9 +136,7 @@ const Portfolio = () => {
           </a>
         </div>
 
-        <p className="stack">
-          React - SCSS (Styled Componeonts) - Material ui - FireBase
-        </p>
+        <p className="stack">Gatsby - React</p>
 
         <div className="double-image">
           <div className="project-name">Real Time Chat App</div>
