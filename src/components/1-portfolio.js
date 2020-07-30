@@ -143,7 +143,7 @@ const Portfolio = () => {
           |{" "}
           <a
             className="port-link"
-            href="https://mern-jokes-forum.netlify.app/register"
+            href="https://mern-jokes-forum.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
