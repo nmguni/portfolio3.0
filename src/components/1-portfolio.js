@@ -5,14 +5,29 @@ import { useStaticQuery, graphql } from "gatsby"
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
     query {
-      malcomx: file(relativePath: { eq: "malcomX.jpg" }) {
+      socialLogin: file(relativePath: { eq: "socialLogin.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      martin: file(relativePath: { eq: "martin-luther.jpg" }) {
+      socialPost: file(relativePath: { eq: "socialPost.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      jobSearch: file(relativePath: { eq: "jobSearch.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      jobSearchOpen: file(relativePath: { eq: "jobSearchOpen.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -89,37 +104,37 @@ const Portfolio = () => {
   return (
     <div id="portfolio" className="Portfolio">
       <div className="title">Portfolio</div>
+
       <div className="port-container">
-        <div className="project-name">Blog</div>
+        <div className="project-name">Social Media Forum</div>
         <div className="section">
           <div className="image-row">
             <div className="left">
               <Img
-                alt="Blog home page"
+                alt="developer jokes social media forum"
                 className="img"
-                fluid={data.blog.childImageSharp.fluid}
+                fluid={data.socialLogin.childImageSharp.fluid}
               />
             </div>
 
             <div className="right">
               <Img
-                alt="Blogs Page"
+                alt="joks forum"
                 className="img"
-                fluid={data.innerBlog.childImageSharp.fluid}
+                fluid={data.socialPost.childImageSharp.fluid}
               />
             </div>
           </div>
         </div>
         <p className="bodyText">
-          I wanted something fast and with good SEO for my blog, so a static
-          website generator like Gatsby seemed like the best fit! <br /> I built
-          this blog to write about various topics in Front-End Development, and
-          the best way to learn something is by teaching it to others!{" "}
+          This App is built with the MERN + G + Apollo stack it allows users to
+          register and login to make posts in a forum. We can like and comment
+          on other user's posts as well as delete our posts.
         </p>
         <div className="links">
           <a
             className="port-link"
-            href="https://github.com/nmguni/personal-blog"
+            href="https://github.com/nmguni/mern-client"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -128,15 +143,14 @@ const Portfolio = () => {
           |{" "}
           <a
             className="port-link"
-            href="https://devblogmguni.com"
+            href="https://mern-jokes-forum.netlify.app/register"
             target="_blank"
             rel="noopener noreferrer"
           >
             preview
           </a>
         </div>
-
-        <p className="stack">Gatsby - React</p>
+        <p className="stack">MERNG - MongoDB Express React Node GraphQL</p>
 
         <div className="double-image">
           <div className="project-name">Real Time Chat App</div>
@@ -183,6 +197,94 @@ const Portfolio = () => {
             </a>
           </div>
           <p className="stack">React - Express - Axios - Node.js - Socket.io</p>
+        </div>
+
+        <div className="double-image">
+          <div className="project-name">Job Search API</div>
+          <div className="section">
+            <div className="image-row">
+              <div className="left">
+                <Img
+                  alt="Github Hub API"
+                  className="img"
+                  fluid={data.jobSearchOpen.childImageSharp.fluid}
+                />
+              </div>
+
+              <div className="right">
+                <Img
+                  alt="Job search GitHub Api"
+                  className="img"
+                  fluid={data.jobSearch.childImageSharp.fluid}
+                />
+              </div>
+            </div>
+          </div>
+          <p className="bodyText">
+            Job search App using GitHub jobs API, with search, filter, and
+            pagination.
+          </p>
+          <div className="links">
+            <a
+              className="port-link"
+              href="https://github.com/nmguni/job-search"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              code
+            </a>{" "}
+            |{" "}
+            <a
+              className="port-link"
+              href="https://react-job-search.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              preview
+            </a>
+          </div>
+          <p className="stack">React - Axios - React Bootstrap</p>
+        </div>
+
+        <div className="single-img">
+          <div className="right">
+            <Img
+              alt="Hackernews"
+              className="img2"
+              fluid={data.hackerNews.childImageSharp.fluid}
+            />
+          </div>
+          <div className="left">
+            <div className="project-name"> Hacker News Clone</div>
+            <p className="bodyText">
+              Hacker News is an awesome site but where it lacks is the design.
+              As a Web Developer, I decided to challenge myself and give it a
+              facelift.
+            </p>
+            <div className="links">
+              {" "}
+              <a
+                className="port-link"
+                href="https://github.com/nmguni/hackernews-api"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                code
+              </a>{" "}
+              |{" "}
+              <a
+                className="port-link"
+                href="https://hackernews-api-clone.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                preview
+              </a>
+            </div>{" "}
+            <p className="stack">
+              React - Express - Axios - Styled Components - firebase - ejs
+            </p>
+          </div>
         </div>
 
         <div className="double-image">
@@ -235,211 +337,57 @@ const Portfolio = () => {
           <p className="stack">React - Scss - Axios - Material ui - Chart.js</p>
         </div>
 
-        <div className="single-img">
-          <div className="right">
-            <Img
-              alt="Hackernews"
-              className="img2"
-              fluid={data.hackerNews.childImageSharp.fluid}
-            />
-          </div>
-          <div className="left">
-            <div className="project-name"> Hacker News Clone</div>
-            <p className="bodyText">
-              Hacker News is an awesome site but where it lacks is the design.
-              As a Web Developer, I decided to challenge myself and give it a
-              facelift.
-            </p>
-            <div className="links">
-              {" "}
-              <a
-                className="port-link"
-                href="https://github.com/nmguni/hackernews-api"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                code
-              </a>{" "}
-              |{" "}
-              <a
-                className="port-link"
-                href="https://hackernews-api-clone.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                preview
-              </a>
-            </div>{" "}
-            <p className="stack">
-              React - Express - Axios - Styled Components - firebase - ejs
-            </p>
-          </div>
-        </div>
-
-        {/* <div className="single-img">
-          <div className="right">
-            <Img
-              alt="personal blog"
-              className="img2"
-              fluid={data.blog.childImageSharp.fluid}
-            />
-          </div>
-          <div className="left">
-            <div className="project-name"> Blog</div>
-            <p className="bodyText">
-              As a developer, I am a life long learner and whats a better place
-              to document my journey than a blog. I challenged my self to post
-              One blog a week, and as I get comfortable I hope to increase it in
-              the future.
-            </p>
-            <div className="links">
-              {" "}
-              <a
-                className="port-link"
-                href="https://github.com/nmguni/blog"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                code
-              </a>{" "}
-              |{" "}
-              <a
-                className="port-link"
-                href="https://mguniblog.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                preview
-              </a>
-            </div>{" "}
-            <p className="stack">Gatsby - SCSS</p>
-          </div>
-        </div> */}
+        {/* --------------------- */}
 
         <div className="double-image">
-          <div className="project-name"> Malcolm & Martin</div>
+          <div className="project-name">Blog</div>
           <div className="section">
             <div className="image-row">
               <div>
                 <Img
-                  alt="malcolm x biography"
+                  alt="Blog home page"
                   className="img"
-                  fluid={data.malcomx.childImageSharp.fluid}
+                  fluid={data.blog.childImageSharp.fluid}
                 />
               </div>
               <div>
                 <Img
-                  alt="martin luther king jr"
+                  alt="Blogs Page"
                   className="img"
-                  fluid={data.martin.childImageSharp.fluid}
+                  fluid={data.innerBlog.childImageSharp.fluid}
                 />
               </div>
             </div>
           </div>
           <p className="bodyText">
-            I was looking for information on Malcolm X when I stumbled upon the{" "}
-            <a
-              target="_blank"
-              className="body-link"
-              rel="noopener noreferrer"
-              href=" https://www.malcolmx.com/"
-            >
-              Malcolm X biography
-            </a>{" "}
-            website. The website is packed with information but where it lacked
-            was the design. I opted out of using any frameworks and just focused
-            on HTML SCSS and some JavaScript for GSAP animations. I have a lot
-            of fun building this site so I decided to build a header with pure
-            HTML/SCSS about Martin Luther King Jr.
+            I wanted something fast and with good SEO for my blog, so a static
+            website generator like Gatsby seemed like the best fit! <br /> I
+            built this blog to write about various topics in Front-End
+            Development, and the best way to learn something is by teaching it
+            to others!{" "}
           </p>
           <div className="links">
-            {" "}
             <a
               className="port-link"
-              href="https://github.com/nmguni/malcolmx"
+              href="https://github.com/nmguni/personal-blog"
               target="_blank"
               rel="noopener noreferrer"
             >
-              code malcolm
-            </a>{" "}
-            --{" "}
-            <a
-              className="port-link"
-              href="https://github.com/nmguni/mlk"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              code Martin
+              code
             </a>{" "}
             |{" "}
             <a
               className="port-link"
-              href="https://malcomx.netlify.app/"
+              href="https://devblogmguni.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              preview malcolm
-            </a>{" "}
-            --{" "}
-            <a
-              className="port-link"
-              href="https://martin-luther.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              preview Martin
+              preview
             </a>
           </div>{" "}
-          <p className="stack">HTML - SCSS - GSAP3.0 - Parcel</p>
+          <p className="stack">Gatsby - React</p>
         </div>
-        <div className="single-img">
-          <div className="right">
-            <Img
-              alt="spartan nutrition suplement website"
-              className="img2"
-              fluid={data.spartan.childImageSharp.fluid}
-            />
-          </div>
-          <div className="left">
-            <div className="project-name"> Spartan Nutrition</div>
-            <p className="bodyText">
-              The go too place for my protein powder is{" "}
-              <a
-                target="_blank"
-                className="body-link"
-                rel="noopener noreferrer"
-                href="https://www.spartannutrition.ca/"
-              >
-                Spartan Nutrition
-              </a>{" "}
-              . Recently I went to their website for the first time to check out
-              some products and was disappointed at what I saw. ( As a developer
-              I have become very critical of any website I go to :P ) I decided
-              to rebuild the site but give it a modern minimalistic design.
-            </p>
-            <div className="links">
-              {" "}
-              <a
-                className="port-link"
-                href="https://github.com/nmguni/spartan-nutrition2.0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                code
-              </a>{" "}
-              |{" "}
-              <a
-                className="port-link"
-                href="https://spartan-nutrition.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                preview
-              </a>
-            </div>{" "}
-            <p className="stack">React - SCSS - Material ui- Maps Api</p>
-          </div>
-        </div>
+
         {/* ------------------------------------------ */}
         <div className="double-image"></div>
       </div>
