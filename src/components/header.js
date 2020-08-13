@@ -10,11 +10,13 @@ import MoreIcon from "@material-ui/icons/MoreVert"
 import logo from "../images/favicon.png"
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: "rgba(255, 255, 255, 0.65)",
+    backgroundColor: " #D0D0D012",
+    borderBottom: "2px solid #EDD6A20F",
     color: "black",
     boxShadow: "none",
     padding: "0 8% 0 8%",
   },
+
   grow: {
     flexGrow: 1,
   },
@@ -80,20 +82,22 @@ const useStyles = makeStyles(theme => ({
   },
 
   links: {
-    color: "#313131ea",
+    color: "#fff",
     textDecoration: "none",
     fontSize: " 1.2rem",
-    fontWeight: "bold",
+    fontWeight: "500",
     letterSpacing: "-0.66px",
     fontFamily: "libre caslon text",
+    letterSpacing: ".59px",
   },
   titleLink: {
     textDecoration: "none",
     color: "black",
   },
   logo: {
-    width: "30px",
-    opacity: ".75",
+    width: "35px",
+    filter: "grayscale(100%)",
+    paddingTop: "10px",
   },
 }))
 

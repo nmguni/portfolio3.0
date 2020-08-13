@@ -36,7 +36,7 @@ const Banner = ({ author }) => {
         </div>
 
         <div className="scroll">
-          <span>scroll down</span>
+          <span>front end</span>
         </div>
       </div>
       <div className="fixed-text">Web developer</div>

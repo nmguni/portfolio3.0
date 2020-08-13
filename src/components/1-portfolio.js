@@ -34,13 +34,7 @@ const Portfolio = () => {
           }
         }
       }
-      blog: file(relativePath: { eq: "blog.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+
       spartan: file(relativePath: { eq: "spartan.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
@@ -76,7 +70,7 @@ const Portfolio = () => {
           }
         }
       }
-      innerBlog: file(relativePath: { eq: "inner-blog.png" }) {
+      innerBlog: file(relativePath: { eq: "innerBlog.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -91,7 +85,7 @@ const Portfolio = () => {
         }
       }
 
-      blog: file(relativePath: { eq: "blog.png" }) {
+      blogHome: file(relativePath: { eq: "blogHome.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -347,7 +341,7 @@ const Portfolio = () => {
                 <Img
                   alt="Blog home page"
                   className="img"
-                  fluid={data.blog.childImageSharp.fluid}
+                  fluid={data.blogHome.childImageSharp.fluid}
                 />
               </div>
               <div>

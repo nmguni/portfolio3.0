@@ -22,21 +22,10 @@ $dot-space: 25px;
   padding-top: 1rem;
   font-size: 15px;
   font-weight: 600;
-  text-transform: uppercase;
   line-height: 1.5em;
   text-align: left;
-  background: linear-gradient(
-        90deg,
-        $bg-color ($dot-space - $dot-size),
-        transparent 1%
-      )
-      center,
-    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
-    $dot-color;
-  background-size: $dot-space $dot-space;
-
-  border-bottom: 2px solid $concreat-white;
-  color: $off-black;
+  background: #2f2f30;
+  color: #a5a5a7;
   &:hover {
     color: $concreat-white;
     border-bottom: 2px solid $off-black;
