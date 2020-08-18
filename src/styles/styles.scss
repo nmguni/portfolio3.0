@@ -15,27 +15,50 @@ $off-white: #f2f4f5;
 $off-black: #3a3e41;
 $off-white2: #f7f7f8;
 
-// // Colors
-$bg-color: #ffffff;
-$dot-color: #00000000;
+// #d4d4d4
 
-// // Dimensions
-$dot-size: 1.5px;
-$dot-space: 15px;
+// Colors
+$bg-color: #2f2f30;
+$dot-color: rgb(255, 255, 255);
 
-// // Colors
-$bg-color: #f3f3f300;
-// $dot-color2: #f70202;
+// Dimensions
+$dot-size: 2px;
+$dot-space: 22px;
 
-$dotted-background: linear-gradient(
-      90deg,
-      $bg-color ($dot-space - $dot-size),
-      transparent 1%
-    )
-    center,
-  linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
-  $dot-color;
-$dotted-background-size: $dot-space $dot-space;
+// $dotted-background: linear-gradient(
+//       90deg,
+//       $bg-color ($dot-space - $dot-size),
+//       transparent 1%
+//     )
+//     center,
+//   linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+//   $dot-color;
+// $dotted-background-size: $dot-space $dot-space;
+
+// .colorBlock {
+//   height: 90px;
+//   // border: 2px solid #f3d88e;
+//   position: absolute;
+//   width: 500px;
+//   /* transform-origin: top; */
+//   transform: rotate(90deg);
+//   z-index: 100;
+//   float: right;
+//   float: left;
+//   margin: 0 auto;
+//   margin: auto;
+//   opacity: 0.1;
+
+//   background: linear-gradient(
+//         90deg,
+//         $bg-color ($dot-space - $dot-size),
+//         transparent 1%
+//       )
+//       center,
+//     linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+//     $dot-color;
+//   background-size: $dot-space $dot-space;
+// }
 
 html,
 body {
@@ -117,7 +140,8 @@ header {
       margin-bottom: 0.5rem;
       padding: 0.2rem 0.3rem;
       font-size: 2rem;
-      color: #a5a5a7;
+      color: #f5f5f685;
+      background-color: $maroon;
       border-radius: 0.3px;
     }
     .main-text {
@@ -125,46 +149,52 @@ header {
       text-transform: capitalize;
       font-weight: 400;
       line-height: 1.1em;
-      color: #8d8269;
+      color: #edd6a2;
     }
     .intro {
       padding-top: 0.5rem;
-      margin-left: 10%;
       font-size: 1.2rem;
       font-weight: 300;
       line-height: 2rem;
       letter-spacing: -0.66px;
-      // color: $off-black;
-      color: #a5a5a7;
+      width: 70%;
+      color: #f5f5f685;
+      &:hover {
+        color: #f5f5f6;
+      }
     }
   }
   .scroll {
-    font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 4.5vw;
+    font-weight: bolder;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
-    // color: #8585852b;
-    color: #e5dbc426;
-
-    span {
-      border-bottom: 1px solid #edd6a2;
-    }
+    color: #f5f5f60a;
+    letter-spacing: 0.4rem;
+    position: absolute;
+    bottom: 0;
   }
   .fixed-text {
     position: fixed;
     top: 50%;
-    right: -40px;
-    transform: rotate(-90deg);
-    -ms-transform: rotate(90deg); /* IE 9 */
+    right: 80px;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
-    color: $off-black;
+    color: #f5f5f60a;
     z-index: 8;
-    border-bottom: 2px solid #a5a5a74f;
+    border-right: 2px solid #83333380;
+
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    // padding: 3px;
+    padding: 2.6px;
+
     @media (max-width: 1440px) {
-      right: -112px;
+      right: 112px;
     }
   }
 }
@@ -292,85 +322,36 @@ header {
 // about
 .about {
   height: 100vh;
-  padding-top: 2.5rem;
-  margin-top: 5%;
-  // background: $off-white;
-  position: relative;
-  strong {
-    color: #800000b5;
-  }
+  margin: 0 1.8rem;
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
+  .about-container {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    height: 100%;
+    .about-me {
+      line-height: 2.6rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-    h2 {
-      text-transform: capitalize;
-      font-size: 3.5rem;
-      font-weight: 600;
-      font-style: normal;
-      margin: 0;
-      color: $off-black;
-      padding: 0.5rem;
-    }
-    h3 {
-      text-transform: capitalize;
-      font-size: 1.8rem;
-      font-weight: 400;
-      font-style: normal;
-      margin: 0;
-      color: $off-black;
-      padding: 0.5rem;
-      width: 100%;
-    }
-    .skill {
-      background-color: rgba(0, 0, 0, 0.075);
+      cursor: pointer;
+      padding: 0 10%;
     }
 
-    .about-content {
-      display: grid;
-      grid-template-columns: 35% auto;
-      grid-gap: 2rem;
-      p {
-        font-size: 1.2rem;
-        font-weight: 300;
-        line-height: 2.2rem;
-        letter-spacing: -0.98px;
-        color: #323232;
-      }
-    }
-
-    .about-stack {
+    .about-box {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      .stack-list {
+      .box {
+        border: 1px solid rgba(99, 99, 99, 0.281);
+
         display: flex;
-        flex-direction: column;
-        // justify-content: center;
+        justify-content: center;
         align-items: center;
       }
-
-      .stack-item {
-        background-color: #364f6b;
-        color: white;
-        padding: 0.1rem 0.38rem;
-        border-radius: 3px;
-        font-weight: 600;
-        letter-spacing: 0.05rem;
-      }
     }
-  }
-  .black-box {
-    background-color: $maroon;
-    height: 100%;
-    width: 50px;
-    position: absolute;
-    right: 20%;
-    bottom: 0;
-    opacity: 0.1;
   }
 }
 
