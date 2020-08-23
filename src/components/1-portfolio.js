@@ -42,14 +42,14 @@ const Portfolio = () => {
           }
         }
       }
-      covid: file(relativePath: { eq: "covid19.png" }) {
+      bookAppAdd: file(relativePath: { eq: "bookAppAdd.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      graph: file(relativePath: { eq: "graph.png" }) {
+      bookAppSave: file(relativePath: { eq: "BookAppSave.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -240,79 +240,37 @@ const Portfolio = () => {
           <p className="stack">React - Axios - React Bootstrap</p>
         </div>
 
-        <div className="single-img">
-          <div className="right">
-            <Img
-              alt="Hackernews"
-              className="img2"
-              fluid={data.hackerNews.childImageSharp.fluid}
-            />
-          </div>
-          <div className="left">
-            <div className="project-name"> Hacker News Clone</div>
-            <p className="bodyText">
-              Hacker News is an awesome site but where it lacks is the design.
-              As a Web Developer, I decided to challenge myself and give it a
-              facelift.
-            </p>
-            <div className="links">
-              {" "}
-              <a
-                className="port-link"
-                href="https://github.com/nmguni/hackernews-api"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                code
-              </a>{" "}
-              |{" "}
-              <a
-                className="port-link"
-                href="https://hackernews-api-clone.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                preview
-              </a>
-            </div>{" "}
-            <p className="stack">
-              React - Express - Axios - Styled Components - firebase - ejs
-            </p>
-          </div>
-        </div>
-
         <div className="double-image">
-          <div className="project-name"> COVID-19 Info / Tracker</div>
+          <div className="project-name">Library</div>
           <div className="section">
             <div className="image-row">
               <div className="left">
                 <Img
-                  alt="covid 19 information"
+                  alt="My library book app"
                   className="img"
-                  fluid={data.covid.childImageSharp.fluid}
+                  fluid={data.bookAppSave.childImageSharp.fluid}
                 />
               </div>
 
               <div className="right">
                 <Img
-                  alt="covid 19 tracking graph"
+                  alt="save books to library"
                   className="img"
-                  fluid={data.graph.childImageSharp.fluid}
+                  fluid={data.bookAppAdd.childImageSharp.fluid}
                 />
               </div>
             </div>
           </div>
           <p className="bodyText">
-            The home page contains educational information about COVID-19 all
-            sourced from the CDC, WHO, and Canada.ca. The second page is a graph
-            representing infections vs deaths from t COVID-19. With the
-            drop-down, you can select a graph representing the world or a
-            specific country.
+            This app allows you to add books by the author's name and save a
+            picture of the book in the image gallery. Page count, description,
+            and publish date can be added to each book. There is an option to
+            edit, add or delet books.
           </p>
           <div className="links">
             <a
               className="port-link"
-              href="https://github.com/nmguni/covid19-tracker-graph"
+              href="https://github.com/nmguni/book-app"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -321,14 +279,14 @@ const Portfolio = () => {
             |{" "}
             <a
               className="port-link"
-              href="https://covid19-info-chart.netlify.app/"
+              href="https://my-library-books.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               preview
             </a>
           </div>
-          <p className="stack">React - Scss - Axios - Material ui - Chart.js</p>
+          <p className="stack">MongoDB - Express - ejs</p>
         </div>
 
         {/* --------------------- */}

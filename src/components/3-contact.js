@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     margin: "0",
     padding: " .8rem",
     textDecoration: "none",
-    color: "#364f6b",
+    color: "#00000073",
     [theme.breakpoints.down(450)]: {
       padding: " .2rem",
     },

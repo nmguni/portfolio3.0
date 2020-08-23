@@ -1,5 +1,4 @@
 import React from "react"
-import Accordion from "./Accordion"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -28,10 +27,6 @@ const Banner = ({ author }) => {
             A passionate lifelong learner. What does that mean to me personally?
             It means I am a curious person who enjoys figuring out how things
             work.
-            {/* <Accordion
-              content="When faced with a challenge or a ‘bug’ in a line of code, I see it as a learning opportunity. Right now, I don't know everything there is about web development but that's OK, I accept the challenge"
-              title="Learn More"
-            /> */}
           </div>
         </div>
 

@@ -1,33 +1,71 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faServer,
+  faDesktop,
+  faCode,
+  faEdit,
+} from "@fortawesome/free-solid-svg-icons"
 
 const About = () => {
   return (
     <div id="about" className="about">
-      <div className="about-container">
-        <div className="about-me">
-          <div className="about-title">
-            <h2>About</h2>
-          </div>
-          <p>
+      <div className="about-wrapper">
+        <div className="about-text">
+          <span className="about-top-text"> who am i</span>
+          <h3 className="about-mid-text">A few words about myself</h3>
+
+          <p className="about-btm-text">
             {" "}
-            I’m a Web Dev based in Ontario and I have been developing for 3.5, I
-            pride myself on coding clean, semantic HTML, and having strong
-            attention to detail. It is very important to ensure a website meets
-            the design requirements, and the site functions across all major
-            browsers. I am also a strong proponent of responsive design, as it
-            ensures a website will adapt to all devices and browsers. Outside of
-            developing websites, I enjoy reading (currently reading ghost wars
-            the secret history of the CIA) , The gym, and watching sports with
-            friends.
+            I’m a Frontend Web Developer based in Ontario with 4 years
+            experience (there’s is still a lot for me to learn!). My love for
+            both technology and design make the web my ideal playground. Outside
+            of developing websites, I enjoy reading (currently reading ghost
+            wars the secret history of the CIA) , the gym, and watching sports
+            with friends.
           </p>
         </div>
-        {/* ------------------ */}
         <div className="about-box">
-          <div className="box">1</div>
-          <div className="box">2</div>
-          <div className="box">3</div>
-          <div className="box">4</div>
+          <div className="box">
+            {" "}
+            <div className="box-img">
+              {" "}
+              <FontAwesomeIcon icon={faDesktop} size="2x" />
+            </div>{" "}
+            <div className="name">Frontend</div>{" "}
+            <div className="description">HTML5 CSS3 SASS JavaScript React</div>{" "}
+          </div>
+          <div className="box">
+            {" "}
+            <div className="box-img">
+              {" "}
+              <FontAwesomeIcon icon={faServer} size="2x" />
+            </div>{" "}
+            <div className="name">Backend / learning</div>{" "}
+            <div className="description">Node.js MongoDB GraphQL</div>{" "}
+          </div>
+          <div className="box">
+            {" "}
+            <div className="box-img">
+              {" "}
+              <FontAwesomeIcon icon={faEdit} size="2x" />
+            </div>{" "}
+            <div className="name">UI/UX</div>{" "}
+            <div className="description">SEO Figma responsive design</div>{" "}
+          </div>
+          <div className="box">
+            {" "}
+            <div className="box-img">
+              {" "}
+              <FontAwesomeIcon icon={faCode} size="2x" />
+            </div>{" "}
+            <div className="name">Dev Tools</div>{" "}
+            <div className="description">
+              Git WordPress Material UI Bootstrap
+            </div>{" "}
+          </div>
         </div>
+        {/* ------------------ */}
       </div>
     </div>
   )
