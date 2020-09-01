@@ -518,11 +518,15 @@ header {
       display: none;
     }
   }
+
   .Portfolio {
     .port-container {
       .image-row {
-        display: grid;
         grid-gap: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .img {
           width: 450px;
         }
