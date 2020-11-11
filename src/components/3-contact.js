@@ -12,16 +12,16 @@ const useStyles = makeStyles(theme => ({
     margin: "0",
     padding: " .8rem",
     textDecoration: "none",
-    color: "#00000073",
+    color: "#fff",
     [theme.breakpoints.down(450)]: {
       padding: " .2rem",
     },
   },
   icon: {
-    fontSize: "3rem",
+    fontSize: "2.5rem",
     paddingTop: "1.3rem",
     "&:hover ": {
-      color: "#3a3e41",
+      color: "rgba(255, 255, 255, 0.579)",
     },
   },
 }))
@@ -29,11 +29,11 @@ const Contact = () => {
   const classes = useStyles()
   return (
     <div id="contact" className="contact">
-      <div className="title">
+      <div className="contact__title">
         <h2>Get in touch</h2>
       </div>
 
-      <div className="contact-links">
+      <div className="contact__links">
         <a
           className={classes.links}
           href="tel: 519 701 0530"

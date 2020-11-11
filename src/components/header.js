@@ -10,7 +10,7 @@ import MoreIcon from "@material-ui/icons/MoreVert"
 import logo from "../images/favicon.png"
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: " #D0D0D000",
+    backgroundColor: " #0000001c",
     borderBottom: "2px solid #EDD6A20F",
     color: "black",
     boxShadow: "none",
@@ -30,40 +30,11 @@ const useStyles = makeStyles(theme => ({
     },
     color: "#000",
   },
-  search: {
-    position: "relative",
-    "&:hover": {
-      backgroundColor: fade(theme.palette.common.black, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(3),
-      width: "auto",
-    },
-  },
-  searchIcon: {
-    width: theme.spacing(7),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "#7a7a7a8c",
-  },
+
   inputRoot: {
     color: "inherit",
   },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 7),
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("md")]: {
-      width: 200,
-    },
-  },
+
   sectionDesktop: {
     display: "none",
     [theme.breakpoints.up("md")]: {
@@ -82,14 +53,12 @@ const useStyles = makeStyles(theme => ({
   },
 
   links: {
-    color: "#f5f5f685",
+    color: "#000",
     textDecoration: "none",
-    fontSize: " 1.2rem",
-    fontWeight: "500",
-    letterSpacing: "-0.66px",
-    fontFamily: "libre caslon text",
-    letterSpacing: ".59px",
-    mixBlendMode: "difference",
+    fontSize: " 1.4rem",
+    fontWeight: "bold",
+    letterSpacing: "0.66px",
+    fontFamily: "Roboto",
   },
   titleLink: {
     textDecoration: "none",
@@ -97,7 +66,7 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     width: "35px",
-    filter: "grayscale(100%)",
+
     paddingTop: "10px",
   },
 }))
@@ -153,7 +122,7 @@ const Header = () => {
     >
       <MenuItem>
         <a className={classes.links} href="/#portfolio">
-          My Work
+          Projects
         </a>
       </MenuItem>
       <MenuItem>
@@ -193,7 +162,7 @@ const Header = () => {
               <MenuItem>
                 {" "}
                 <a className={classes.links} href="/#portfolio">
-                  My Work
+                  Projects
                 </a>{" "}
               </MenuItem>
               <MenuItem>

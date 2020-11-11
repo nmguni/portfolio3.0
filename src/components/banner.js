@@ -19,22 +19,13 @@ const Banner = ({ author }) => {
       <Helmet
         title={`${data.site.siteMetadata.author} | ${data.site.siteMetadata.title}`}
       />
-      <div className="container">
-        <div className="row">
-          <div className="greating">Hello!</div>
-          <div className="main-text">I`m Ndumiso Mguni</div>
-          <div className="intro">
-            A passionate lifelong learner. What does that mean to me personally?
-            It means I am a curious person who enjoys figuring out how things
-            work.
-          </div>
-        </div>
-
-        <div className="scroll">
-          <span>frontend developer</span>
+      <div className="banner__container">
+        <div className="banner__title">I`m Ndumiso Mguni</div>
+        <div className="banner__position">Front-End Developer</div>
+        <div className="banner__subtitle">
+          React-Redux | JacaScript-ES6 | HTML-CSS | MongoDB | Express
         </div>
       </div>
-      <div className="fixed-text">MERN</div>
     </div>
   )
 }

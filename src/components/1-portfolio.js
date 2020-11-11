@@ -1,54 +1,11 @@
 import React from "react"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
+import "../styles/portfolio.scss"
 
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
     query {
-      socialLogin: file(relativePath: { eq: "socialLogin.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      socialPost: file(relativePath: { eq: "socialPost.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-
-      jobSearch: file(relativePath: { eq: "jobSearch.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      jobSearchOpen: file(relativePath: { eq: "jobSearchOpen.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-
-      spartan: file(relativePath: { eq: "spartan.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      bookAppAdd: file(relativePath: { eq: "bookAppAdd.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       bookAppSave: file(relativePath: { eq: "BookAppSave.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
@@ -63,13 +20,6 @@ const Portfolio = () => {
           }
         }
       }
-      chat: file(relativePath: { eq: "chat.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       innerBlog: file(relativePath: { eq: "innerBlog.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
@@ -77,7 +27,8 @@ const Portfolio = () => {
           }
         }
       }
-      hackerNews: file(relativePath: { eq: "News-Reader.png" }) {
+
+      shoeShop: file(relativePath: { eq: "shoe_shop.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -85,7 +36,7 @@ const Portfolio = () => {
         }
       }
 
-      blogHome: file(relativePath: { eq: "blogHome.png" }) {
+      notesApp: file(relativePath: { eq: "notes_app.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -96,253 +47,227 @@ const Portfolio = () => {
   `)
 
   return (
-    <div id="portfolio" className="Portfolio">
-      <div className="title">Portfolio</div>
+    <div id="portfolio" className="portfolio__container">
+      <div className="portfolio__title">Projects</div>
 
-      <div className="port-container">
-        <div className="project-name">Social Media Forum</div>
-        <div className="section">
-          <div className="image-row">
-            <div className="left">
-              <Img
-                alt="developer jokes social media forum"
-                className="img"
-                fluid={data.socialLogin.childImageSharp.fluid}
-              />
-            </div>
-
-            <div className="right">
-              <Img
-                alt="joks forum"
-                className="img"
-                fluid={data.socialPost.childImageSharp.fluid}
-              />
-            </div>
+      {/* Top container */}
+      <div className="portfolio__content">
+        <div className="portfolio__image__container">
+          <div className="image__container">
+            <Img
+              alt="real time chat app login"
+              className="image"
+              fluid={data.chatApp.childImageSharp.fluid}
+            />
           </div>
         </div>
-        <p className="bodyText">
-          This App is built with the MERN + G + Apollo stack it allows users to
-          register and login to make posts in a forum. We can like and comment
-          on other user's posts as well as delete our posts.
-        </p>
-        <div className="links">
-          <a
-            className="port-link"
-            href="https://github.com/nmguni/mern-client"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            code
-          </a>{" "}
-          |{" "}
-          <a
-            className="port-link"
-            href="https://mern-jokes-forum.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            preview
-          </a>
-        </div>
-        <p className="stack">MERNG - MongoDB Express React Node GraphQL</p>
-
-        <div className="double-image">
-          <div className="project-name">Real Time Chat App</div>
-          <div className="section">
-            <div className="image-row">
-              <div className="left">
-                <Img
-                  alt="real time chat app login"
-                  className="img"
-                  fluid={data.chatApp.childImageSharp.fluid}
-                />
-              </div>
-
-              <div className="right">
-                <Img
-                  alt="real time chat app "
-                  className="img"
-                  fluid={data.chat.childImageSharp.fluid}
-                />
-              </div>
-            </div>
+        <div className="portfolio__details__container">
+          <div className="details__title"> Realtime Chat Application</div>
+          <div className="details__description">
+            I used Socket.io to manage real-time web socket connections to a
+            Node.js server that will allow you to communicate real-time chat
+            messages to all clients connected to a single server.
           </div>
-          <p className="bodyText">
-            Realtime Chat Application. React on the front end, with NodeJS +
-            Socket.io web socket library on the back end
-          </p>
-          <div className="links">
+          <div className="details__stack">
+            React - Express - Axios - Node.js - Socket.io
+          </div>
+          <div className="details__links">
             <a
-              className="port-link"
+              className="link"
               href="https://github.com/nmguni/-realtime-chat-app"
               target="_blank"
               rel="noopener noreferrer"
             >
-              code
+              Code
             </a>{" "}
             |{" "}
             <a
-              className="port-link"
+              className="link"
               href="https://rick-morty-chat-app.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              preview
+              Preview
             </a>
           </div>
-          <p className="stack">React - Express - Axios - Node.js - Socket.io</p>
         </div>
+      </div>
+      {/* Bottom  */}
 
-        <div className="double-image">
-          <div className="project-name">Job Search API</div>
-          <div className="section">
-            <div className="image-row">
-              <div className="left">
-                <Img
-                  alt="Github Hub API"
-                  className="img"
-                  fluid={data.jobSearchOpen.childImageSharp.fluid}
-                />
-              </div>
-
-              <div className="right">
-                <Img
-                  alt="Job search GitHub Api"
-                  className="img"
-                  fluid={data.jobSearch.childImageSharp.fluid}
-                />
-              </div>
-            </div>
+      {/* Top container */}
+      <div className="portfolio__content">
+        <div className="portfolio__image__container image__container__red__bg">
+          <div className="image__container">
+            <Img
+              alt="shoe shop"
+              className="image"
+              fluid={data.shoeShop.childImageSharp.fluid}
+            />
           </div>
-          <p className="bodyText">
-            Job search App using GitHub jobs API, with search, filter, and
-            pagination.
-          </p>
-          <div className="links">
+        </div>
+        <div className="portfolio__details__container">
+          <div className="details__title"> Shoe Store </div>
+          <div className="details__description">
+            E-Commerce Website. Logged in user can add/remove items to the store
+            and buy them using PayPal API. <br />{" "}
+            <span style={{ fontWeight: "bold", fontSize: ".8rem" }}>
+              Login Info <br /> Email: johnwick@gmail.com PW: john1234
+            </span>
+          </div>
+          <div className="details__stack">
+            React + Redux - Node - Express - MongoDB (MERN stack)
+          </div>
+          <div className="details__links">
             <a
-              className="port-link"
-              href="https://github.com/nmguni/job-search"
+              className="link"
+              href="https://github.com/nmguni/shoe-store"
               target="_blank"
               rel="noopener noreferrer"
             >
-              code
+              Code
             </a>{" "}
             |{" "}
             <a
-              className="port-link"
-              href="https://react-job-search.netlify.app/"
+              className="link"
+              href="https://calm-eyrie-12447.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              preview
+              Preview
             </a>
           </div>
-          <p className="stack">React - Axios - React Bootstrap</p>
         </div>
+      </div>
+      {/* Bottom  */}
 
-        <div className="double-image">
-          <div className="project-name">Library</div>
-          <div className="section">
-            <div className="image-row">
-              <div className="left">
-                <Img
-                  alt="My library book app"
-                  className="img"
-                  fluid={data.bookAppSave.childImageSharp.fluid}
-                />
-              </div>
-
-              <div className="right">
-                <Img
-                  alt="save books to library"
-                  className="img"
-                  fluid={data.bookAppAdd.childImageSharp.fluid}
-                />
-              </div>
-            </div>
+      {/* Top container */}
+      <div className="portfolio__content">
+        <div className="portfolio__image__container">
+          <div className="image__container">
+            <Img
+              alt="My library book app"
+              className="image"
+              fluid={data.bookAppSave.childImageSharp.fluid}
+            />
           </div>
-          <p className="bodyText">
+        </div>
+        <div className="portfolio__details__container">
+          <div className="details__title">Library </div>
+          <div className="details__description">
             This app allows you to add books by the author's name and save a
             picture of the book in the image gallery. Page count, description,
             and publish date can be added to each book. There is an option to
             edit, add or delet books.
-          </p>
-          <div className="links">
+          </div>
+          <div className="details__stack">MongoDB - Express - ejs</div>
+          <div className="details__links">
             <a
-              className="port-link"
+              className="link"
               href="https://github.com/nmguni/book-app"
               target="_blank"
               rel="noopener noreferrer"
             >
-              code
+              Code
             </a>{" "}
             |{" "}
             <a
-              className="port-link"
+              className="link"
               href="https://my-library-books.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              preview
+              Preview
             </a>
           </div>
-          <p className="stack">MongoDB - Express - ejs</p>
         </div>
+      </div>
+      {/* Bottom  */}
 
-        {/* --------------------- */}
-
-        <div className="double-image">
-          <div className="project-name">Blog</div>
-          <div className="section">
-            <div className="image-row">
-              <div>
-                <Img
-                  alt="Blog home page"
-                  className="img"
-                  fluid={data.blogHome.childImageSharp.fluid}
-                />
-              </div>
-              <div>
-                <Img
-                  alt="Blogs Page"
-                  className="img"
-                  fluid={data.innerBlog.childImageSharp.fluid}
-                />
-              </div>
-            </div>
+      {/* Top container */}
+      <div className="portfolio__content">
+        <div className="portfolio__image__container image__container__cyan__bg">
+          <div className="image__container">
+            <Img
+              alt="real time chat app login"
+              className="image"
+              fluid={data.notesApp.childImageSharp.fluid}
+            />
           </div>
-          <p className="bodyText">
-            I wanted something fast and with good SEO for my blog, so a static
-            website generator like Gatsby seemed like the best fit! <br /> I
-            built this blog to write about various topics in Front-End
+        </div>
+        <div className="portfolio__details__container">
+          <div className="details__title"> Notes App </div>
+          <div className="details__description">
+            This app allows users to post notes or reminders. Images can be
+            added to notes to make them stand out. Notes and be deleted or
+            edited as well as likes can be added to the notes.
+          </div>
+          <div className="details__stack">
+            React + Redux - Node - Express - MongoDB (MERN stack)
+          </div>
+          <div className="details__links">
+            <a
+              className="link"
+              href="https://github.com/nmguni/notes-app-client"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Code
+            </a>{" "}
+            |{" "}
+            <a
+              className="link"
+              href="https://mern-notes-app.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Preview
+            </a>
+          </div>
+        </div>
+      </div>
+      {/* Bottom  */}
+
+      {/* Top container */}
+      <div className="portfolio__content">
+        <div className="portfolio__image__container image__container__blue__bg">
+          <div className="image__container">
+            <Img
+              alt="My blog"
+              className="image"
+              fluid={data.innerBlog.childImageSharp.fluid}
+            />
+          </div>
+        </div>
+        <div className="portfolio__details__container">
+          <div className="details__title"> Blog </div>
+          <div className="details__description">
+            I built this blog to write about various topics in Front-End
             Development, and the best way to learn something is by teaching it
             to others!{" "}
-          </p>
-          <div className="links">
+          </div>
+          <div className="details__stack">Gatsby - React</div>
+          <div className="details__links">
             <a
-              className="port-link"
+              className="link"
               href="https://github.com/nmguni/personal-blog"
               target="_blank"
               rel="noopener noreferrer"
             >
-              code
+              Code
             </a>{" "}
             |{" "}
             <a
-              className="port-link"
+              className="link"
               href="https://devblogmguni.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              preview
+              Preview
             </a>
-          </div>{" "}
-          <p className="stack">Gatsby - React</p>
+          </div>
         </div>
-
-        {/* ------------------------------------------ */}
-        <div className="double-image"></div>
       </div>
+      {/* Bottom  */}
     </div>
   )
 }

@@ -10,12 +10,12 @@ import {
 const About = () => {
   return (
     <div id="about" className="about">
-      <div className="about-wrapper">
-        <div className="about-text">
-          <span className="about-top-text"> who am i</span>
-          <h3 className="about-mid-text">A few words about myself</h3>
+      <div className="about__wrapper">
+        <div className="about__text">
+          <div className="about__top__text"> who am i...</div>
+          <div className="about__mid__text">A few words about myself</div>
 
-          <p className="about-btm-text">
+          <div className="about__btm__text">
             {" "}
             I’m a Frontend Web Developer based in Ontario with 4 years
             experience (there’s is still a lot for me to learn!). My love for
@@ -23,45 +23,47 @@ const About = () => {
             of developing websites, I enjoy reading (currently reading ghost
             wars the secret history of the CIA) , the gym, and watching sports
             with friends.
-          </p>
+          </div>
         </div>
-        <div className="about-box">
+        <div className="about__box">
           <div className="box">
             {" "}
-            <div className="box-img">
+            <div className="box__img">
               {" "}
               <FontAwesomeIcon icon={faDesktop} size="2x" />
             </div>{" "}
             <div className="name">Frontend</div>{" "}
-            <div className="description">HTML5 CSS3 SASS JavaScript React</div>{" "}
+            <div className="description">
+              HTML5 - CSS3 SASS - JavaScript - React - Redux
+            </div>{" "}
           </div>
           <div className="box">
             {" "}
-            <div className="box-img">
+            <div className="box__img">
               {" "}
               <FontAwesomeIcon icon={faServer} size="2x" />
             </div>{" "}
-            <div className="name">Backend / learning</div>{" "}
-            <div className="description">Node.js MongoDB GraphQL</div>{" "}
+            <div className="name">Backend / Developing</div>{" "}
+            <div className="description">Node - MongoDB - Express </div>{" "}
           </div>
           <div className="box">
             {" "}
-            <div className="box-img">
+            <div className="box__img">
               {" "}
               <FontAwesomeIcon icon={faEdit} size="2x" />
             </div>{" "}
-            <div className="name">UI/UX</div>{" "}
-            <div className="description">SEO Figma responsive design</div>{" "}
+            <div className="name">Prototyping / Version Controll</div>{" "}
+            <div className="description">Figma Git - Git Hub</div>{" "}
           </div>
           <div className="box">
             {" "}
-            <div className="box-img">
+            <div className="box__img">
               {" "}
               <FontAwesomeIcon icon={faCode} size="2x" />
             </div>{" "}
-            <div className="name">Dev Tools</div>{" "}
+            <div className="name">CMS / CSS Frameworks</div>{" "}
             <div className="description">
-              Git WordPress Material UI Bootstrap
+              WordPress - Material UI - Bootstrap - Gatsby
             </div>{" "}
           </div>
         </div>
