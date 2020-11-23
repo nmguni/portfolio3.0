@@ -43,6 +43,38 @@ const Portfolio = () => {
           }
         }
       }
+
+      blogpage: file(relativePath: { eq: "blog.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      blogposts: file(relativePath: { eq: "blog_posts.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      themecart: file(relativePath: { eq: "theme_store_cart.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      themestore: file(relativePath: { eq: "theme_store.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -50,31 +82,39 @@ const Portfolio = () => {
     <div id="portfolio" className="portfolio__container">
       <div className="portfolio__title">Projects</div>
 
-      {/* Top container */}
+      {/*  DOUBLE IMG CONTAINER*/}
       <div className="portfolio__content">
-        <div className="portfolio__image__container">
+        <div className="portfolio__image__container ">
           <div className="image__container">
             <Img
-              alt="real time chat app login"
+              alt="My blog"
               className="image"
-              fluid={data.chatApp.childImageSharp.fluid}
+              fluid={data.themestore.childImageSharp.fluid}
             />
           </div>
         </div>
-        <div className="portfolio__details__container">
-          <div className="details__title"> Realtime Chat Application</div>
+
+        <div className="portfolio__image__container ">
+          <div className="image__container">
+            <Img
+              alt="My blog"
+              className="image"
+              fluid={data.themecart.childImageSharp.fluid}
+            />
+          </div>
+        </div>
+
+        <div className="double__image">
+          <div className="details__title"> Theme Store </div>
           <div className="details__description">
-            I used Socket.io to manage real-time web socket connections to a
-            Node.js server that will allow you to communicate real-time chat
-            messages to all clients connected to a single server.
+            A web app that displays UI Themes from developers that can be
+            purchased. Ratings and descriptions can be given for each theme.
           </div>
-          <div className="details__stack">
-            React - Express - Axios - Node.js - Socket.io
-          </div>
+          React + Redux - Node - Express - MongoDB (MERN stack)
           <div className="details__links">
             <a
               className="link"
-              href="https://github.com/nmguni/-realtime-chat-app"
+              href="https://github.com/nmguni/theme-store"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -83,7 +123,7 @@ const Portfolio = () => {
             |{" "}
             <a
               className="link"
-              href="https://rick-morty-chat-app.netlify.app/"
+              href="https://themestore.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -140,30 +180,40 @@ const Portfolio = () => {
       </div>
       {/* Bottom  */}
 
-      {/* Top container */}
+      {/*  DOUBLE IMG CONTAINER*/}
       <div className="portfolio__content">
-        <div className="portfolio__image__container">
+        <div className="portfolio__image__container   image__container__cyan__bg">
           <div className="image__container">
             <Img
-              alt="My library book app"
+              alt="My blog"
               className="image"
-              fluid={data.bookAppSave.childImageSharp.fluid}
+              fluid={data.blogpage.childImageSharp.fluid}
             />
           </div>
         </div>
-        <div className="portfolio__details__container">
-          <div className="details__title">Library </div>
-          <div className="details__description">
-            This app allows you to add books by the author's name and save a
-            picture of the book in the image gallery. Page count, description,
-            and publish date can be added to each book. There is an option to
-            edit, add or delet books.
+
+        <div className="portfolio__image__container   image__container__cyan__bg">
+          <div className="image__container">
+            <Img
+              alt="My blog"
+              className="image"
+              fluid={data.blogposts.childImageSharp.fluid}
+            />
           </div>
-          <div className="details__stack">MongoDB - Express - ejs</div>
+        </div>
+
+        <div className="double__image ">
+          <div className="details__title"> Blog </div>
+          <div className="details__description">
+            I built this blog to write about various topics in Front-End
+            Development, and the best way to learn something is by teaching it
+            to others!{" "}
+          </div>
+          <div className="details__stack">Gatsby - React</div>
           <div className="details__links">
             <a
               className="link"
-              href="https://github.com/nmguni/book-app"
+              href="https://github.com/nmguni/personal-blog"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -172,7 +222,51 @@ const Portfolio = () => {
             |{" "}
             <a
               className="link"
-              href="https://my-library-books.herokuapp.com/"
+              href="https://devblogmguni.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Preview
+            </a>
+          </div>
+        </div>
+      </div>
+      {/* Bottom  */}
+
+      {/* Top container */}
+      <div className="portfolio__content">
+        <div className="portfolio__image__container">
+          <div className="image__container">
+            <Img
+              alt="real time chat app login"
+              className="image"
+              fluid={data.chatApp.childImageSharp.fluid}
+            />
+          </div>
+        </div>
+        <div className="portfolio__details__container">
+          <div className="details__title"> Realtime Chat Application</div>
+          <div className="details__description">
+            I used Socket.io to manage real-time web socket connections to a
+            Node.js server that will allow you to communicate real-time chat
+            messages to all clients connected to a single server.
+          </div>
+          <div className="details__stack">
+            React - Express - Axios - Node.js - Socket.io
+          </div>
+          <div className="details__links">
+            <a
+              className="link"
+              href="https://github.com/nmguni/-realtime-chat-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Code
+            </a>{" "}
+            |{" "}
+            <a
+              className="link"
+              href="https://rick-morty-chat-app.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -229,27 +323,28 @@ const Portfolio = () => {
 
       {/* Top container */}
       <div className="portfolio__content">
-        <div className="portfolio__image__container image__container__blue__bg">
+        <div className="portfolio__image__container">
           <div className="image__container">
             <Img
-              alt="My blog"
+              alt="My library book app"
               className="image"
-              fluid={data.innerBlog.childImageSharp.fluid}
+              fluid={data.bookAppSave.childImageSharp.fluid}
             />
           </div>
         </div>
         <div className="portfolio__details__container">
-          <div className="details__title"> Blog </div>
+          <div className="details__title">Library </div>
           <div className="details__description">
-            I built this blog to write about various topics in Front-End
-            Development, and the best way to learn something is by teaching it
-            to others!{" "}
+            This app allows you to add books by the author's name and save a
+            picture of the book in the image gallery. Page count, description,
+            and publish date can be added to each book. There is an option to
+            edit, add or delet books.
           </div>
-          <div className="details__stack">Gatsby - React</div>
+          <div className="details__stack">MongoDB - Express - ejs</div>
           <div className="details__links">
             <a
               className="link"
-              href="https://github.com/nmguni/personal-blog"
+              href="https://github.com/nmguni/book-app"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -258,7 +353,7 @@ const Portfolio = () => {
             |{" "}
             <a
               className="link"
-              href="https://devblogmguni.com"
+              href="https://my-library-books.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -1,0 +1,23 @@
+.contact {
+  height: 30vh;
+  background-color: #364f6b;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // align-items: center;/
+  .contact__title {
+    font-size: 2.6rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 0 1rem 0 1rem;
+    color: #364f6b;
+    margin-top: 2%;
+    text-transform: capitalize;
+
+    h2 {
+      margin: 0;
+    }
+  }
+}

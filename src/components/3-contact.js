@@ -7,6 +7,7 @@ import GitHubIcon from "@material-ui/icons/GitHub"
 import PhoneIcon from "@material-ui/icons/Phone"
 import EmailIcon from "@material-ui/icons/Email"
 
+import "../styles/contact.scss"
 const useStyles = makeStyles(theme => ({
   links: {
     margin: "0",

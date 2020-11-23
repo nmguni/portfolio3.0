@@ -4,6 +4,46 @@
   padding-bottom: 2rem;
   font-family: "Roboto", sans-serif;
 
+  //   UNIVERSAL ---------------
+
+  .details__title {
+    color: #1dbff3;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+  .details__description {
+    font-size: 1.1rem;
+    // font-weight: 100;
+    color: rgba(0, 0, 0, 0.72);
+    padding: 0.5rem 0 0.5rem 0;
+    letter-spacing: 0.85px;
+    line-height: 1.6rem;
+  }
+  .details__links {
+    padding: 0.9rem 0 0 0;
+    .link {
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.72);
+      padding: 2px 5px;
+      border-radius: 4px;
+      background-color: #f5f5f5;
+      letter-spacing: 0.68px;
+    }
+  }
+  .double__image {
+    @media (max-width: 800px) {
+      text-align: center;
+    }
+  }
+
+  .details__stack {
+    font-size: 0.9rem;
+    color: #1dbff3;
+  }
+  //   UNIVERSAL STOPS ---------------
+
   .portfolio__title {
     font-size: 5vw;
     color: #3a3e41;
@@ -24,7 +64,7 @@
       background-color: #ffcdd2 !important;
     }
     .image__container__cyan__bg {
-      background-color: #b2ebf2 !important;
+      background-color: #e0f7fa !important;
     }
     .image__container__blue__bg {
       background-color: #d1c4e9 !important;
@@ -47,37 +87,6 @@
       align-items: center;
       text-align: center;
       padding: 1rem;
-
-      .details__description {
-        font-size: 1.2rem;
-        font-weight: 100;
-        padding: 5px;
-        letter-spacing: 0.85px;
-        line-height: 1.6rem;
-      }
-      .details__title {
-        color: #1dbff3;
-        font-weight: bold;
-        font-size: 1.8rem;
-      }
-
-      .details__links {
-        padding: 0.9rem;
-        .link {
-          font-size: 1.1rem;
-          font-weight: bold;
-          text-decoration: none;
-          color: #3a3e41;
-          padding: 2px 5px;
-          border-radius: 4px;
-          background-color: #f5f5f5;
-          letter-spacing: 0.68px;
-        }
-      }
-      .details__stack {
-        font-size: 1.2rem;
-        color: #707070;
-      }
     }
   }
 }
