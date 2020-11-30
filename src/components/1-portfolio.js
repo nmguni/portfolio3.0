@@ -36,7 +36,7 @@ const Portfolio = () => {
         }
       }
 
-      notesApp: file(relativePath: { eq: "notes_app.jpg" }) {
+      notesApp: file(relativePath: { eq: "notes-app.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -87,7 +87,7 @@ const Portfolio = () => {
         <div className="portfolio__image__container ">
           <div className="image__container">
             <Img
-              alt="My blog"
+              alt="Theme store"
               className="image"
               fluid={data.themestore.childImageSharp.fluid}
             />
@@ -97,7 +97,7 @@ const Portfolio = () => {
         <div className="portfolio__image__container ">
           <div className="image__container">
             <Img
-              alt="My blog"
+              alt="theme cart page"
               className="image"
               fluid={data.themecart.childImageSharp.fluid}
             />
@@ -311,49 +311,6 @@ const Portfolio = () => {
             <a
               className="link"
               href="https://mern-notes-app.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Preview
-            </a>
-          </div>
-        </div>
-      </div>
-      {/* Bottom  */}
-
-      {/* Top container */}
-      <div className="portfolio__content">
-        <div className="portfolio__image__container">
-          <div className="image__container">
-            <Img
-              alt="My library book app"
-              className="image"
-              fluid={data.bookAppSave.childImageSharp.fluid}
-            />
-          </div>
-        </div>
-        <div className="portfolio__details__container">
-          <div className="details__title">Library </div>
-          <div className="details__description">
-            This app allows you to add books by the author's name and save a
-            picture of the book in the image gallery. Page count, description,
-            and publish date can be added to each book. There is an option to
-            edit, add or delet books.
-          </div>
-          <div className="details__stack">MongoDB - Express - ejs</div>
-          <div className="details__links">
-            <a
-              className="link"
-              href="https://github.com/nmguni/book-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Code
-            </a>{" "}
-            |{" "}
-            <a
-              className="link"
-              href="https://my-library-books.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
