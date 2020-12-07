@@ -180,59 +180,6 @@ const Portfolio = () => {
       </div>
       {/* Bottom  */}
 
-      {/*  DOUBLE IMG CONTAINER*/}
-      <div className="portfolio__content">
-        <div className="portfolio__image__container   image__container__cyan__bg">
-          <div className="image__container">
-            <Img
-              alt="My blog"
-              className="image"
-              fluid={data.blogpage.childImageSharp.fluid}
-            />
-          </div>
-        </div>
-
-        <div className="portfolio__image__container   image__container__cyan__bg">
-          <div className="image__container">
-            <Img
-              alt="My blog"
-              className="image"
-              fluid={data.blogposts.childImageSharp.fluid}
-            />
-          </div>
-        </div>
-
-        <div className="double__image ">
-          <div className="details__title"> Blog </div>
-          <div className="details__description">
-            I built this blog to write about various topics in Front-End
-            Development, and the best way to learn something is by teaching it
-            to others!{" "}
-          </div>
-          <div className="details__stack">Gatsby - React</div>
-          <div className="details__links">
-            <a
-              className="link"
-              href="https://github.com/nmguni/personal-blog"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Code
-            </a>{" "}
-            |{" "}
-            <a
-              className="link"
-              href="https://devblogmguni.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Preview
-            </a>
-          </div>
-        </div>
-      </div>
-      {/* Bottom  */}
-
       {/* Top container */}
       <div className="portfolio__content">
         <div className="portfolio__image__container">

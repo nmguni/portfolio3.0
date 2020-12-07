@@ -119,6 +119,21 @@ header {
       padding: 0.8rem;
       color: #3a3e41d2;
     }
+    .banner__resumeLink {
+      background-color: maroon;
+      border-radius: 4px;
+      padding: 0.25rem 0.5rem;
+      .banner__link {
+        text-decoration: none;
+        color: #fff;
+        letter-spacing: 0.075em;
+        font-weight: 800;
+      }
+      &:hover {
+        transition: ease-in-out 300ms;
+        background-color: rgba(128, 0, 0, 0.712);
+      }
+    }
   }
 
   @media (max-width: 1440px) {
