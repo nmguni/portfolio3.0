@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import res from "../../public/resume/ndumsoMguni_resume.pdf"
+import res from "../../public/resume/NdumisoMguniResume.pdf"
 
 const Banner = ({ author }) => {
   const data = useStaticQuery(graphql`
