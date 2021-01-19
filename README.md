@@ -1,3 +1,6 @@
 # Welcome to my Portfolio
 ---
-[Portfolo](https://devmguni.com/)
+#### Live Link to my [Portfolo](https://devmguni.com/).
+
+### Built With
+`React Gatsby`
