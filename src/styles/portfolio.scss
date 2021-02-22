@@ -8,15 +8,13 @@
     background-color: maroon;
   }
 
-  //   UNIVERSAL ---------------
-
   .details__title {
     color: #1dbff3;
     font-weight: bold;
     font-size: 1.8rem;
   }
   .details__description {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     // font-weight: 100;
     color: rgba(0, 0, 0, 0.72);
     padding: 0.5rem 0 0.5rem 0;
@@ -25,6 +23,7 @@
   }
   .details__links {
     padding: 0.9rem 0 0 0;
+    display: flex;
     .link {
       font-size: 1.1rem;
       font-weight: bold;
@@ -46,10 +45,14 @@
     font-size: 0.9rem;
     color: #1dbff3;
   }
+  .teal-link {
+    color: #1dbff3;
+  }
   //   UNIVERSAL STOPS ---------------
 
   .portfolio__title {
-    font-size: 5vw;
+    font-size: 4.5vw;
+    text-transform: uppercase;
     color: #3a3e41;
     padding: 1rem;
   }
@@ -65,13 +68,19 @@
     }
 
     .image__container__red__bg {
-      background-color: #ffcdd2 !important;
+      background-color: #ffebee !important;
     }
     .image__container__cyan__bg {
       background-color: #e0f7fa !important;
     }
     .image__container__blue__bg {
       background-color: #d1c4e9 !important;
+    }
+    .image__container__teal__bg {
+      background-color: #e0f2f1 !important;
+    }
+    .image__container__orange__bg {
+      background-color: #fff3e0 !important;
     }
     .portfolio__image__container {
       background-color: #ecf0f1;
@@ -87,10 +96,7 @@
     .portfolio__details__container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
-      padding: 1rem;
     }
   }
 }
