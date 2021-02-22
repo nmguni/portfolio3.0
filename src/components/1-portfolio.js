@@ -263,7 +263,7 @@ Orthodontics"
           </div>
         </div>
         <div className="portfolio__details__container">
-          <div className="details__title">SoleScience </div>
+          <div className="details__title">Sole Science </div>
           <div className="details__description">
             <ul>
               <li>
