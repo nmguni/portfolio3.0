@@ -75,6 +75,13 @@ const Portfolio = () => {
           }
         }
       }
+      inps: file(relativePath: { eq: "inps.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -133,6 +140,51 @@ const Portfolio = () => {
         </div>
       </div>
       {/* Bottom  */}
+
+      {/* --------------------------------------------------------------------------------------------------------------------------- */}
+      {/* --------------------------------------------------------------------------------------------------------------------------- */}
+      {/* --------------------------------------------------------------------------------------------------------------------------- */}
+
+      {/* Top container */}
+      <div className="portfolio__content">
+        <div className="portfolio__image__container ">
+          <div className="image__container">
+            <Img
+              alt="shoe shop"
+              className="image"
+              fluid={data.inps.childImageSharp.fluid}
+            />
+          </div>
+        </div>
+        <div className="portfolio__details__container">
+          <div className="details__title">inps </div>
+          <div className="details__description">
+            Make sure images comply with SEO standards. Under 100kb and contain
+            Alt texts Each page has an SEO title and Meta Description Run
+            Screaming Frog crawler to audit sites for common SEO issues by
+            extracting data & auditing for common SEO issues. (Find broken Links
+            audit redirects, discover duplicate content, analyze page titles &
+            MetaData just to name a few) My main task was to transform PDF’s
+            into working pages in the succession planning section.
+          </div>
+          <div className="details__stack">Drupal</div>
+          <div className="details__links">
+            <a
+              className="link"
+              href="https://inps.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Site Link
+            </a>
+          </div>
+        </div>
+      </div>
+      {/* Bottom  */}
+
+      {/* --------------------------------------------------------------------------------------------------------------------------- */}
+      {/* --------------------------------------------------------------------------------------------------------------------------- */}
+      {/* --------------------------------------------------------------------------------------------------------------------------- */}
 
       {/* Top container */}
       <div className="portfolio__content">

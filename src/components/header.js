@@ -7,10 +7,13 @@ import Toolbar from "@material-ui/core/Toolbar"
 import IconButton from "@material-ui/core/IconButton"
 import Typography from "@material-ui/core/Typography"
 import MoreIcon from "@material-ui/icons/MoreVert"
-import logo from "../images/favicon.png"
+// import logo from "../images/favicon.png"
+// import logo from "../images/nav-logo.png"
+import logo from "../images/nav-logo2.png"
+
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: " #0000001c",
+    backgroundColor: " #ff00",
     borderBottom: "2px solid #EDD6A20F",
     color: "black",
     boxShadow: "none",
@@ -53,12 +56,13 @@ const useStyles = makeStyles(theme => ({
   },
 
   links: {
-    color: "#000",
+    color: "#3a3e41",
     textDecoration: "none",
-    fontSize: " 1.4rem",
+    fontSize: " 1rem",
+    letterSpacing: "2.96px",
+    textTransform: "uppercase",
     fontWeight: "bold",
-    letterSpacing: "0.66px",
-    fontFamily: "Roboto",
+    // borderBottom: "2px solid",
   },
   titleLink: {
     textDecoration: "none",
