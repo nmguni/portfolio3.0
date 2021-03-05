@@ -3,8 +3,6 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import "../styles/header.scss"
 
-import { TweenMax } from "gsap"
-
 const Banner = ({ author }) => {
   const data = useStaticQuery(graphql`
     query {

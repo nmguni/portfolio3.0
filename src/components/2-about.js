@@ -12,17 +12,19 @@ const About = () => {
     <div id="about" className="about">
       <div className="about__wrapper">
         <div className="about__text">
-          <div className="about__top__text"> who am i...</div>
-          <div className="about__mid__text">A few words about myself</div>
+          <div className="about__text-top"> who am i...</div>
+          <div className="about__text-mid">A few words about myself</div>
 
-          <div className="about__btm__text">
+          <div className="about__text-btm">
             {" "}
             I’m a Frontend Web Developer based in Ontario with 4 years
-            experience (there’s is still a lot for me to learn!). My love for
-            both technology and design make the web my ideal playground. Outside
-            of developing websites, I enjoy reading (currently reading ghost
-            wars the secret history of the CIA) , the gym, and watching sports
-            with friends.
+            experience (there is still a lot for me to learn!). My love for both
+            technology and design make the web my ideal playground. Outside of
+            developing websites, I enjoy reading{" "}
+            <span>
+              (Currently reading Stalingrad The Fateful Siege: 1942 - 1943)
+            </span>{" "}
+            , the gym, and having BBQ's with friends.
           </div>
         </div>
         <div className="about__box">

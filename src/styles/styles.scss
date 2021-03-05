@@ -14,7 +14,7 @@ $off-black: #3a3e41;
 $off-white2: #f7f7f8;
 
 $bg-color: rgb(255, 255, 255);
-$dot-color: rgba(0, 0, 0, 0.781);
+$dot-color: rgba(0, 0, 0, 0.699);
 // Dimensions
 $dot-size: 1.2px;
 $dot-space: 22px;
@@ -105,14 +105,14 @@ header {
       padding: 0 2rem 0 2rem;
       line-height: 2rem;
 
-      .about__top__text {
+      .about__text-top {
         font-weight: bold;
         font-size: 1.3rem;
         padding: 0.2rem;
         text-transform: capitalize;
         letter-spacing: 0.075em;
       }
-      .about__mid__text {
+      .about__text-mid {
         font-size: 3vw;
         font-weight: bold;
         padding: 0.8rem 1rem 0.8rem 1rem;
@@ -121,9 +121,10 @@ header {
         display: inline-block;
         text-transform: capitalize;
       }
-      .about__btm__text {
+      .about__text-btm {
         text-align: center;
         font-weight: 500;
+        font-size: 1.2rem;
         padding: 0.5rem 0.5rem;
       }
     }
