@@ -2,16 +2,16 @@ import React from "react"
 import "../styles/styles.scss"
 
 // Import Components
-import Header from "../components/header"
-import Banner from "../components/Banner"
-import Portfolio from "../components/1-portfolio"
-import About from "../components/2-about"
-import Contact from "../components/3-contact"
+import Nav from "../components/nav"
+import Hero from "../components/hero"
+import Portfolio from "../components/portfolio"
+import About from "../components/about"
+import Contact from "../components/contact"
 
 const IndexPage = () => (
   <div>
-    <Header />
-    <Banner />
+    <Nav />
+    <Hero />
     <Portfolio />
     <About />
     <Contact />

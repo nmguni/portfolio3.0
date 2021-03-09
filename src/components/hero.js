@@ -1,9 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import "../styles/header.scss"
+import "../styles/hero.scss"
 
-const Banner = ({ author }) => {
+const Hero = ({ author }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -16,14 +16,14 @@ const Banner = ({ author }) => {
   `)
 
   return (
-    <div className="banner">
+    <div className="hero">
       <Helmet
         title={`${data.site.siteMetadata.author} | ${data.site.siteMetadata.title}`}
       />
-      <div className="banner__container">
-        <div className="banner__title">Ndumiso Mguni</div>
-        <div className="banner__position">Front-End Developer</div>
-        <div className="banner__subtitle">
+      <div className="hero__container">
+        <div className="hero__title">Ndumiso Mguni</div>
+        <div className="hero__position">Front-End Developer</div>
+        <div className="hero__subtitle">
           React-Redux | JacaScript-ES6 | HTML-CSS | MongoDB | Express
         </div>
       </div>
@@ -31,4 +31,4 @@ const Banner = ({ author }) => {
   )
 }
 
-export default Banner
+export default Hero

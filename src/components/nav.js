@@ -7,8 +7,6 @@ import Toolbar from "@material-ui/core/Toolbar"
 import IconButton from "@material-ui/core/IconButton"
 import Typography from "@material-ui/core/Typography"
 import MoreIcon from "@material-ui/icons/MoreVert"
-// import logo from "../images/favicon.png"
-// import logo from "../images/nav-logo.png"
 import logo from "../images/nav-logo2.png"
 
 const useStyles = makeStyles(theme => ({
@@ -75,7 +73,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const Header = () => {
+const Nav = () => {
   const classes = useStyles()
   const [anchorEl, setAnchorEl] = React.useState(null)
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
@@ -144,7 +142,7 @@ const Header = () => {
   )
 
   return (
-    <header>
+    <nav>
       <div className="container">
         <AppBar className={classes.root}>
           {" "}
@@ -197,8 +195,8 @@ const Header = () => {
         {renderMobileMenu}
         {renderMenu}
       </div>
-    </header>
+    </nav>
   )
 }
 
-export default Header
+export default Nav
