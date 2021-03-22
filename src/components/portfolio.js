@@ -74,6 +74,20 @@ const Portfolio = () => {
           }
         }
       }
+      blogHome: file(relativePath: { eq: "blogHome.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      blogProjects: file(relativePath: { eq: "blogProjects.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -309,6 +323,61 @@ Orthodontics"
       {/* Bottom  */}
 
       <div className="portfolio__title">personal Projects</div>
+      {/* ------------- BLOG ---------------- */}
+      {/*  DOUBLE IMG CONTAINER*/}
+      <div className="portfolio__content">
+        <div className="portfolio__image__container image__container__cyan__bg  ">
+          <div className="image__container">
+            <Img
+              alt="Blog Home page"
+              className="image"
+              fluid={data.blogHome.childImageSharp.fluid}
+            />
+          </div>
+        </div>
+
+        <div className="portfolio__image__container image__container__cyan__bg  ">
+          <div className="image__container">
+            <Img
+              alt="Blog Projects Page"
+              className="image"
+              fluid={data.blogProjects.childImageSharp.fluid}
+            />
+          </div>
+        </div>
+
+        <div className="double__image">
+          <div className="details__title">The Blog </div>
+          <div className="details__description">
+            I don't know everything there is about Web Development but I have a
+            passion for learning and will continue to sharpen my skills. Passion
+            for learning and improving is the reason I made this blog. This blog
+            will document the most recent projects I have built along with my
+            journey through Leet code to improve my Algorithm solving skills.
+          </div>
+          React + Gatsby - Styled-Components
+          <div className="details__links">
+            <a
+              className="link"
+              href="https://github.com/nmguni/personal-blog"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Code
+            </a>{" "}
+            |{" "}
+            <a
+              className="link"
+              href="https://devblogmguni.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Blog Page
+            </a>
+          </div>
+        </div>
+      </div>
+      {/* Bottom  */}
       {/*  DOUBLE IMG CONTAINER*/}
       <div className="portfolio__content">
         <div className="portfolio__image__container  image__container__orange__bg">
