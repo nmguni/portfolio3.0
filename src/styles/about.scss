@@ -13,7 +13,7 @@
     }
 
     background-color: #a8d3c6;
-    color: #4b4b4b;
+    color: rgba(0, 0, 0, 0.72);
 
     .text__container {
       text-align: center;
@@ -21,16 +21,20 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
+      background-color: rgba(255, 255, 255, 0.24);
+      border-radius: 5px;
       margin: 2.5rem;
+
       .text__container--title {
         font-weight: bold;
-        font-size: 3.8vw;
+        font-size: 3.6vw;
+        padding: 1.2rem;
       }
       .text__container--paragraph {
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         line-height: 3rem;
+        padding: 1.5rem 1rem;
 
         @media (max-width: 600px) {
           padding: 0.5rem 3rem;
