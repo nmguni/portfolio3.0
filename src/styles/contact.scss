@@ -16,6 +16,10 @@
     margin-top: 2%;
     text-transform: capitalize;
 
+    @media (max-width: 600px) {
+      font-size: 1.6rem;
+    }
+
     h2 {
       margin: 0;
     }
